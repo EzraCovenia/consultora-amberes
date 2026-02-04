@@ -3,36 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Consultora Amberes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Consultora Amberes</h1>
-<p>Talento senior (+50) para empresas que valoran experiencia.</p>
+<header>
+  <h1>Consultora Amberes</h1>
+  <p>Talento senior (+50) para empresas que valoran experiencia, compromiso y trayectoria.</p>
+</header>
 
-<h2>Ofertas laborales (+50)</h2>
-<div id="ofertas">Cargando ofertas...</div>
+<section>
+  <h2>Ofertas laborales (+50)</h2>
 
-<script>
-fetch("https://opensheet.elk.sh/1uT_5rHEjlKJGkfHLkiUVj2IuT8yJr0b7rV2-mjauG_4/edit?gid=1945277461#gid=1945277461/Ofertas")
-  .then(res => res.json())
-  .then(data => {
-    let html = "";
-    data.forEach(o => {
-      html += `
-        <div>
-          <strong>${o.Cargo}</strong><br>
-          ${o.Ciudad} | ${o.Jornada} | ${o.Sueldo}<br>
-          ${o.Descripción}
-          <hr>
-        </div>
-      `;
-    });
-    document.getElementById("ofertas").innerHTML = html;
-  });
-</script>
+  <div class="ofertas">
+    <div class="card">
+      <h3>Administrativo Senior</h3>
+      <p>Empresa nacional busca experiencia en gestión administrativa y apoyo operativo.</p>
+      <a class="btn" href="mailto:consultoraamberes@gmail.com">Postular</a>
+    </div>
 
-<p>📧 consultoraamberes@gmail.com</p>
-<p>📞 +56 9 5364 9876</p>
+    <div class="card">
+      <h3>Asistente Contable</h3>
+      <p>Ideal para profesionales con trayectoria en contabilidad y control financiero.</p>
+      <a class="btn" href="mailto:consultoraamberes@gmail.com">Postular</a>
+    </div>
+
+    <div class="card">
+      <h3>Atención Clientes</h3>
+      <p>Rol orientado a servicio, comunicación y resolución de consultas.</p>
+      <a class="btn" href="mailto:consultoraamberes@gmail.com">Postular</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>📧 <a href="mailto:consultoraamberes@gmail.com">consultoraamberes@gmail.com</a></p>
+  <p>📞 +56 9 5364 9876</p>
+  <p>Consultora Amberes · Chile</p>
+</footer>
 
 </body>
 </html>
