@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Consultora Amberes</title>
+</head>
+<body>
+
+<h1>Consultora Amberes</h1>
+<p>Talento senior (+50) para empresas que valoran experiencia.</p>
+
+<h2>Ofertas laborales (+50)</h2>
+<div id="ofertas">Cargando ofertas...</div>
+
+<script>
+fetch("https://opensheet.elk.sh/TU_ID_SHEET/Ofertas")
+  .then(res => res.json())
+  .then(data => {
+    let html = "";
+    data.forEach(o => {
+      html += `
+        <div>
+          <strong>${o.Cargo}</strong><br>
+          ${o.Ciudad} | ${o.Jornada} | ${o.Sueldo}<br>
+          ${o.Descripción}
+          <hr>
+        </div>
+      `;
+    });
+    document.getElementById("ofertas").innerHTML = html;
+  });
+</script>
+
+<p>📧 consultoraamberes@gmail.com</p>
+<p>📞 +56 9 5364 9876</p>
+
+</body>
+</html>
