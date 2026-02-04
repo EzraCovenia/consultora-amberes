@@ -124,3 +124,8 @@ footer a {
   color: #c89f4f;
   text-decoration: none;
 }
+
+.logo-img {
+  width: 110px;
+  margin-bottom: 20px;
+}
