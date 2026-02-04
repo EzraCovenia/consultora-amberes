@@ -1,0 +1,121 @@
+:root {
+  --verde: #6f8f7a;
+  --beige: #f4f1ec;
+  --azul: #3f4f5a;
+  --dorado: #c8a24a;
+  --texto: #2e2e2e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--beige);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, var(--verde), var(--azul));
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 15px auto 0;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h2 {
+  color: var(--azul);
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.ofertas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--verde);
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: var(--dorado);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+footer {
+  background-color: var(--azul);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--dorado);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+/* Responsive ajustes */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
