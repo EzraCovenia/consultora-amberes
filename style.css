@@ -1,119 +1,131 @@
-/* RESET BÁSICO */
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* TIPOGRAFÍA GENERAL */
+/* BASE */
 body {
-    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    color: #2f2f2f;
-    background-color: #f7f5f2;
-    line-height: 1.6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #fdfaf6;
+  color: #2f3e3a;
+  line-height: 1.6;
 }
 
 /* HEADER */
 .header {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #ffffff;
+  text-align: center;
+  padding: 80px 20px 60px;
 }
 
 .logo {
-    max-width: 180px;
-    margin-bottom: 10px;
+  max-width: 260px;   /* 🔹 AQUÍ crecemos el logo */
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .tagline {
-    font-size: 1.1rem;
-    color: #6b6b6b;
+  font-size: 1.2rem;
+  color: #6b7b75;
 }
 
 /* SECCIONES */
 .section {
-    padding: 60px 20px;
+  padding: 90px 20px;
 }
 
 .section.alt {
-    background-color: #ffffff;
+  background-color: #f1ebe4;
 }
 
+/* CONTENEDOR CENTRAL */
 .section-content {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  max-width: 1200px;  /* 🔹 evita textos arrinconados */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
+/* INVERSIÓN PARA POSTULANTES */
 .section-content.reverse {
-    flex-direction: row-reverse;
+  direction: rtl;
 }
 
-.text {
-    flex: 1;
+.section-content.reverse > * {
+  direction: ltr;
 }
 
+/* TEXTO */
 .text h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #3d3d3d;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
 }
 
 .text p {
-    margin-bottom: 15px;
-    color: #4f4f4f;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  color: #3e4d48;
 }
 
-/* BOTONES */
+/* BOTÓN */
 .button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 25px;
-    background-color: #8b6f4e;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background-color: #8b6f4e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
 .button:hover {
-    background-color: #755c3f;
+  background-color: #755d41;
 }
 
 /* IMÁGENES */
-.image {
-    flex: 1;
-}
-
-.image img {
-    width: 100%;
-    border-radius: 10px;
+.images img {
+  width: 100%;
+  max-height: 420px;   /* 🔹 evita que sean gigantes */
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* FOOTER */
 .footer {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: #3d3d3d;
-    color: #ffffff;
-    font-size: 0.95rem;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #2f3e3a;
+  color: #ffffff;
 }
 
 .footer p {
-    margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-    .section-content,
-    .section-content.reverse {
-        flex-direction: column;
-        text-align: center;
-    }
+@media (max-width: 900px) {
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
-    .logo {
-        max-width: 150px;
-    }
+  .section-content.reverse {
+    direction: ltr;
+  }
+
+  .text h2 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    max-width: 220px;
+  }
 }
