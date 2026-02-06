@@ -195,5 +195,28 @@ body {
   width: 24px;
   height: 24px;
 }
+
+.instagram-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #8c6f4a; /* tono corporativo */
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 1000;
+}
+
+.instagram-link img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.instagram-link:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
   
 }
