@@ -1,238 +1,127 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* BASE */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #fdfaf6;
-  color: #2f3e3a;
+  color: #1f2933;
+  background: #ffffff;
   line-height: 1.6;
 }
 
 /* HEADER */
 .header {
-  text-align: center;
-  padding: 80px 20px 60px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  max-width: 260px;   /* 🔹 AQUÍ crecemos el logo */
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+  height: 48px;
 }
 
-.tagline {
-  font-size: 1.2rem;
-  color: #6b7b75;
-}
-
-/* SECCIONES */
-.section {
-  padding: 90px 20px;
-}
-
-.section.alt {
-  background-color: #f1ebe4;
-}
-
-/* CONTENEDOR CENTRAL */
-.section-content {
-  max-width: 1200px;  /* 🔹 evita textos arrinconados */
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-/* INVERSIÓN PARA POSTULANTES */
-.section-content.reverse {
-  direction: rtl;
-}
-
-.section-content.reverse > * {
-  direction: ltr;
-}
-
-/* TEXTO */
-.text h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-
-.text p {
-  font-size: 1.05rem;
-  margin-bottom: 18px;
-  color: #3e4d48;
-}
-
-/* BOTÓN */
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 28px;
-  background-color: #8b6f4e;
-  color: #ffffff;
+.nav a {
+  margin-left: 24px;
   text-decoration: none;
-  border-radius: 8px;
+  color: #1f2933;
   font-weight: 500;
-  transition: background-color 0.2s ease;
 }
 
-.button:hover {
-  background-color: #755d41;
+.instagram-link img {
+  height: 22px;
+  vertical-align: middle;
 }
 
-/* IMÁGENES */
-.images img {
-  width: 100%;
-  max-height: 420px;   /* 🔹 evita que sean gigantes */
-  object-fit: cover;
+/* HERO */
+.hero {
+  background: linear-gradient(120deg, #0f172a, #1e293b);
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* SERVICES */
+.services {
+  padding: 90px 10%;
+  background: #f7f7f5;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 36px;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+  margin-bottom: 16px;
+}
+
+.service-card ul {
+  margin-top: 16px;
+  padding-left: 18px;
+}
+
+/* CONTACT */
+.contact {
+  padding: 90px 10%;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.contact p {
+  margin-bottom: 24px;
+}
+
+.contact-direct a {
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-direct a:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
 .footer {
+  background: #1f2933;
+  color: #ffffff;
   text-align: center;
   padding: 40px 20px;
-  background-color: #2f3e3a;
-  color: #ffffff;
-}
-
-.footer p {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .section-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .section-content.reverse {
-    direction: ltr;
-  }
-
-  .text h2 {
-    font-size: 2rem;
-  }
-
-  .logo {
-    max-width: 220px;
-  }
-
-/* CONTACTO */
-.section.contact {
-  background-color: #ffffff;
-}
-
-.section-content.single {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.text.center {
-  text-align: center;
-}
-
-.contact-form {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  padding: 14px;
-  border-radius: 8px;
-  border: 1px solid #cfc7bd;
-  font-size: 0.95rem;
-  font-family: inherit;
-}
-
-.contact-form button {
-  margin-top: 10px;
-  padding: 14px;
-  background-color: #8b6f4e;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #755d41;
-}
-
-/* INSTAGRAM FLOAT */
-.instagram-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 48px;
-  height: 48px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.instagram-float img {
-  width: 24px;
-  height: 24px;
-}
-
-.instagram-link {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #8c6f4a; /* tono corporativo */
-    border-radius: 50%;
-    padding: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    z-index: 1000;
-}
-
-.instagram-link img {
-    width: 24px;
-    height: 24px;
-    display: block;
-}
-
-.instagram-link:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-.instagram-link img {
-    width: 28px;
-    height: 28px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.instagram-link img:hover {
-    opacity: 1;
-}
-
-.hero-logo {
-  max-width: 160px;
-  margin-bottom: 24px;
-}
-  
 }
