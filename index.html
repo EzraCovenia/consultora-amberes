@@ -1,220 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amberes Consultora · Talento Senior</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Amberes Consultora · Talento Senior</title>
 
-    <meta name="description" content="Amberes Consultora · Talento Senior. Conectamos empresas con talento +50 confiable, experimentado y motivado.">
+  <meta name="description"
+        content="Amberes Consultora conecta empresas con talento senior +50 y ofrece evaluación de proyectos y gestión financiera para PYMES.">
 
-    <style>
-        :root {
-            --primary: #1f2933;
-            --secondary: #6b7280;
-            --accent: #b45309;
-            --bg-light: #f9fafb;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--primary);
-            line-height: 1.6;
-            background: #ffffff;
-        }
-
-        /* HEADER */
-        header {
-            background: linear-gradient(135deg, #111827, #1f2937);
-            color: white;
-            padding: 80px 20px 100px;
-            text-align: center;
-        }
-
-        header img {
-            max-width: 200px;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            font-size: 2.4rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            color: #d1d5db;
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 80px 20px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 60px;
-            align-items: center;
-        }
-
-        section.alt {
-            background: var(--bg-light);
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        p {
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-
-        img.section-img {
-            width: 100%;
-            border-radius: 12px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 14px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #92400e;
-        }
-
-        /* FORM */
-        .form-box {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 16px;
-            border-radius: 6px;
-            border: 1px solid #d1d5db;
-            font-family: inherit;
-        }
-
-        form button {
-            width: 100%;
-            border: none;
-            background: var(--primary);
-            color: white;
-            padding: 14px;
-            font-size: 1rem;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background: #000;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #111827;
-            color: #d1d5db;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        footer img {
-            width: 24px;
-            margin-top: 15px;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        footer img:hover {
-            opacity: 1;
-        }
-    </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<img 
-  src="images/logo-amberes.png" 
-  alt="Amberes Consultora"
-  class="hero-logo">
-    <h1>Talento Senior que impulsa tu empresa</h1>
-    <p>Conectamos organizaciones con profesionales +50 confiables, experimentados y comprometidos</p>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <img src="images/logo-amberes.png" alt="Amberes Consultora · Talento Senior" class="logo">
+
+    <nav class="nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/amberes_rrhh"
+         target="_blank"
+         class="instagram-link"
+         aria-label="Instagram Amberes Consultora">
+        <img src="images/instagram.svg" alt="Instagram Amberes Consultora">
+      </a>
+    </nav>
+  </div>
 </header>
 
-<section>
-    <div class="container">
-        <div>
-            <h2>Para Empresas</h2>
-            <p>Seleccionamos talento senior altamente calificado, con trayectoria comprobada y fuerte compromiso laboral.</p>
-            <p>Menor rotación, mayor estabilidad y resultados sostenibles para tu organización.</p>
-            <a href="mailto:consultoraamberes@gmail.com" class="btn">Solicitar contacto</a>
-        </div>
-        <img src="images/empresas.jpg" alt="Empresas" class="section-img">
-    </div>
+<!-- HERO -->
+<section class="hero">
+  <h1>Talento Senior que impulsa tu empresa</h1>
+  <p>
+    Conectamos organizaciones con profesionales +50 confiables,
+    experimentados y comprometidos
+  </p>
 </section>
 
-<section class="alt">
-    <div class="container">
-        <img src="images/postulantes.jpg" alt="Postulantes" class="section-img">
-        <div>
-            <h2>Para Profesionales +50</h2>
-            <p>Valoramos tu experiencia, compromiso y conocimiento acumulado.</p>
-            <p>Te acompañamos en tu proceso de reinserción laboral con empresas que realmente valoran el talento senior.</p>
-            <a href="mailto:consultoraamberes@gmail.com" class="btn">Quiero postular</a>
-        </div>
+<!-- SERVICIOS -->
+<section id="servicios" class="services">
+  <h2>Nuestros Servicios</h2>
+
+  <div class="services-grid">
+
+    <!-- Servicio 1 -->
+    <div class="service-card">
+      <h3>Evaluación de Proyectos y Gestión Financiera</h3>
+      <p>
+        Apoyamos a pequeñas y medianas empresas en la evaluación financiera
+        y contable de sus proyectos y operaciones, entregando información
+        clara para la toma de decisiones estratégicas.
+      </p>
+      <ul>
+        <li>Evaluación de proyectos de inversión</li>
+        <li>Revisión de estados financieros</li>
+        <li>Declaraciones de IVA</li>
+        <li>Declaraciones juradas</li>
+        <li>Contabilidad y apoyo financiero</li>
+      </ul>
     </div>
+
+    <!-- Servicio 2 -->
+    <div class="service-card">
+      <h3>Búsqueda laboral para talento senior (+50)</h3>
+      <p>
+        Acompañamos a profesionales senior en su proceso de reinserción laboral,
+        poniendo en valor su trayectoria, experiencia y compromiso.
+      </p>
+    </div>
+
+    <!-- Servicio 3 -->
+    <div class="service-card">
+      <h3>Reclutamiento y Selección de talento senior (+50)</h3>
+      <p>
+        Seleccionamos talentos senior para empresas que buscan reducir
+        la rotación y mejorar la estabilidad operativa de sus equipos.
+      </p>
+    </div>
+
+  </div>
 </section>
 
-<section>
-    <div class="container">
-        <div>
-            <h2>Contacto</h2>
-            <p>¿Quieres trabajar con nosotros o conocer más sobre nuestros servicios?</p>
-        </div>
-        <div class="form-box">
-            <form>
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <textarea rows="4" placeholder="Mensaje"></textarea>
-                <button type="submit">Enviar mensaje</button>
-            </form>
-        </div>
-    </div>
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
+  <h2>Hablemos</h2>
+  <p>
+    Si eres empresa o talento senior, conversemos.
+    Escríbenos directamente y te responderemos a la brevedad.
+  </p>
+
+  <div class="contact-direct">
+    <p>
+      📧 <a href="mailto:consultoraamberes@gmail.com">
+        consultoraamberes@gmail.com
+      </a>
+    </p>
+
+    <p>
+      📸 <a href="https://www.instagram.com/amberes_rrhh" target="_blank">
+        @amberes_rrhh
+      </a>
+    </p>
+  </div>
 </section>
 
-<footer>
-    <p><strong>Amberes Consultora · Talento Senior</strong></p>
-    <p>📧 consultoraamberes@gmail.com · 📞 +56 9 5364 9876</p>
-    <a href="https://www.instagram.com/amberes_rrhh" target="_blank">
-        <img src="images/instagram.png" alt="Instagram">
-    </a>
+<!-- FOOTER -->
+<footer class="footer">
+  <p><strong>Amberes Consultora · Talento Senior</strong></p>
+  <p>📧 consultoraamberes@gmail.com</p>
+  <p>📞 +56 9 5364 9876</p>
 </footer>
 
 </body>
