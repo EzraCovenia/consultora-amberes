@@ -229,5 +229,10 @@ body {
 .instagram-link img:hover {
     opacity: 1;
 }
+
+.hero-logo {
+  max-width: 160px;
+  margin-bottom: 24px;
+}
   
 }
