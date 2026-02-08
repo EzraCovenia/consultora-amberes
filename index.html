@@ -2,125 +2,97 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Amberes Consultora · Talento Senior +50</title>
-
-    <meta name="description" content="Amberes Consultora: Reclutamiento y selección de talento senior +50, evaluación financiera y asesoría estratégica para pymes en Chile.">
-    <meta name="keywords" content="talento senior, reclutamiento +50, evaluación financiera pymes, consultora recursos humanos, selección de personal senior">
-    <meta name="author" content="Amberes Consultora">
-
+    <title>Amberes Consultora | Talento Senior +50</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="header">
-    <div class="header-container">
-        <img src="images/logo-amberes.png" alt="Amberes Consultora Talento Senior" class="logo">
+<!-- HERO -->
+<header class="hero">
+    <img src="images/logo-amberes.png" alt="Amberes Consultora" class="logo">
 
-        <nav class="nav">
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contacto</a>
+    <h1>Talento Senior que impulsa tu empresa</h1>
+    <p>Conectamos organizaciones con profesionales +50 confiables, experimentados y comprometidos</p>
 
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/amberes_rrhh" target="_blank" class="social-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
-                </svg>
-            </a>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/amberes_rrhh" target="_blank">
+            <img src="images/instagram.svg" alt="Instagram">
+        </a>
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/amberes-consulting-992a303ab/" target="_blank" class="social-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-2 6h4v12H2zm7 0h4v1.7h.1a4.4 4.4 0 0 1 4-2.2c4.3 0 5.1 2.8 5.1 6.5V21h-4v-5.4c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z"/>
-                </svg>
-            </a>
-        </nav>
+        <a href="https://www.linkedin.com/in/amberes-consulting-992a303ab/" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+        </a>
     </div>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Talento Senior que fortalece tu organización</h1>
-        <p>
-            Conectamos empresas y pymes con profesionales +50 confiables,
-            experimentados y altamente comprometidos.
-        </p>
-        <a href="#contacto" class="btn-primary">Solicitar asesoría</a>
-    </div>
-</section>
-
-<section id="servicios" class="services">
+<!-- SERVICIOS -->
+<section class="services">
     <h2>Nuestros Servicios</h2>
 
     <div class="services-grid">
 
         <div class="service-card">
-            <img src="images/servicio-proyectos.jpg" alt="Evaluación financiera pymes">
-            <h3>Evaluación de Proyectos y Gestión Financiera</h3>
+            <h3>Evaluación de Proyectos</h3>
             <p>
-                Apoyamos a pymes en evaluación de inversiones, revisión de estados financieros,
-                declaraciones de IVA y análisis contable para decisiones estratégicas.
+                Asesoramos a pequeñas y medianas empresas en contabilidad, declaraciones de IVA,
+                declaraciones juradas, revisión de estados financieros y evaluación de proyectos de inversión.
             </p>
         </div>
 
         <div class="service-card">
-            <img src="images/servicio-postulantes.jpg" alt="Búsqueda laboral senior">
-            <h3>Búsqueda Laboral para Talento Senior (+50)</h3>
+            <h3>Búsqueda de Trabajo +50</h3>
             <p>
-                Acompañamos a profesionales senior en su reinserción laboral,
-                valorizando trayectoria, experiencia y compromiso.
+                Apoyamos a profesionales senior en su reinserción laboral,
+                destacando su experiencia, confiabilidad y valor estratégico.
             </p>
         </div>
 
         <div class="service-card">
-            <img src="images/servicio-empresas.jpg" alt="Reclutamiento senior empresas">
-            <h3>Reclutamiento y Selección de Talento Senior (+50)</h3>
+            <h3>Reclutamiento y Selección +50</h3>
             <p>
-                Seleccionamos talento senior para empresas que buscan reducir rotación
-                y fortalecer su estabilidad operativa.
+                Conectamos empresas con talento senior altamente calificado,
+                alineado a sus necesidades técnicas y culturales.
             </p>
         </div>
 
     </div>
 </section>
 
-<section id="contacto" class="contact">
-    <div class="contact-container">
+<!-- FORMULARIO -->
+<section class="contact">
+    <h2>Formulario de Atención</h2>
 
-        <div class="contact-info">
-            <h2>Formulario de Atención</h2>
-            <p>
-                Si eres empresa o profesional senior, conversemos.
-                Te contactaremos a la brevedad.
-            </p>
-            <p><strong>Email:</strong> consultoraamberes@gmail.com</p>
-        </div>
+    <form class="contact-form">
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="tel" placeholder="Teléfono" required>
+        <input type="email" placeholder="Correo electrónico" required>
 
-        <!-- FORMULARIO CONECTADO -->
-        <form class="contact-form" action="https://formspree.io/f/mreabzdn" method="POST">
-            <input type="text" name="nombre" placeholder="Nombre completo" required>
-            <input type="tel" name="telefono" placeholder="Teléfono" required>
-            <input type="email" name="email" placeholder="Correo electrónico" required>
+        <select required>
+            <option value="">Tipo de servicio</option>
+            <option>Evaluación de proyectos</option>
+            <option>Búsqueda laboral +50</option>
+            <option>Reclutamiento y selección +50</option>
+        </select>
 
-            <select name="servicio" required>
-                <option value="">Tipo de servicio</option>
-                <option>Asesoría laboral</option>
-                <option>Reclutamiento y selección</option>
-                <option>Evaluación financiera</option>
-            </select>
+        <select required>
+            <option value="">¿Qué busca?</option>
+            <option>Asesoría laboral</option>
+            <option>Servicio de reclutamiento</option>
+            <option>Servicio de evaluación financiera</option>
+        </select>
 
-            <textarea name="mensaje" placeholder="Cuéntanos qué estás buscando"></textarea>
+        <button type="submit">Enviar consulta</button>
+    </form>
 
-            <button type="submit">Enviar solicitud</button>
-        </form>
-
-    </div>
+    <p class="contact-info">
+        📧 <strong>consultoraamberes@gmail.com</strong>
+    </p>
 </section>
 
-<footer class="footer">
-    <p><strong>Amberes Consultora · Talento Senior</strong></p>
-    <p>consultoraamberes@gmail.com · +56 9 5364 9876</p>
+<footer>
+    © 2026 Amberes Consultora · Todos los derechos reservados
 </footer>
 
 </body>
