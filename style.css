@@ -6,48 +6,47 @@
 }
 
 body {
-    background: #fafafa;
-    color: #1c2430;
+    background: #f6f7f9;
+    color: #1b2430;
 }
 
 /* HEADER */
 .header {
-    background: #fff;
-    border-bottom: 1px solid #e5e5e5;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
 }
 
 .header-container {
     max-width: 1200px;
     margin: auto;
-    padding: 18px 20px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    height: 95px;
+    height: 110px;
 }
 
 .nav a {
     margin-left: 22px;
     text-decoration: none;
-    color: #1c2430;
+    color: #1b2430;
     font-weight: 500;
 }
 
 .social-icon svg {
     width: 22px;
     height: 22px;
-    fill: #1c2430;
-    vertical-align: middle;
+    fill: #1b2430;
 }
 
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, #0f1c2e, #1b2f4a);
-    color: #fff;
-    padding: 120px 20px;
+    background: linear-gradient(135deg, #0f1f33, #1f3a5a);
+    color: #ffffff;
+    padding: 130px 20px;
     text-align: center;
 }
 
@@ -57,23 +56,23 @@ body {
 }
 
 .hero p {
-    max-width: 700px;
+    max-width: 720px;
     margin: auto;
     font-size: 20px;
 }
 
 .btn-primary {
-    margin-top: 30px;
+    margin-top: 35px;
     display: inline-block;
     background: #c9a35d;
-    color: #1c2430;
-    padding: 14px 30px;
+    color: #1b2430;
+    padding: 14px 32px;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
 }
 
-/* SERVICIOS */
+/* SERVICES */
 .services {
     padding: 90px 20px;
     max-width: 1200px;
@@ -93,11 +92,66 @@ body {
 }
 
 .service-card {
-    background: #fff;
-    padding: 30px;
+    background: #ffffff;
+    padding: 32px;
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .service-card img {
-    width:
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+.contact {
+    background: #ffffff;
+    padding: 90px 20px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background: #1b2430;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* FOOTER */
+.footer {
+    background: #0f1f33;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        height: 85px;
+    }
+}
