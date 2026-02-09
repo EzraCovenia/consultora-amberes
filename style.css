@@ -75,6 +75,8 @@ body {
 
 .social-icons img:hover {
     transform: scale(1.15);
+    .social-instagram {
+    filter: invert(1);
 }
 
 /* SERVICIOS */
