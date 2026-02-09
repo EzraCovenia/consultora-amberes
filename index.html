@@ -2,105 +2,114 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Amberes Consultora | Talento Senior +50</title>
+    <title>Amberes Consultora | Talento Senior y Evaluación Financiera</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Amberes Consultora conecta talento senior +50 con empresas y apoya a PYMES con evaluación financiera y contable.">
+    <meta name="keywords" content="talento senior, reclutamiento, evaluación financiera, consultora, PYMES">
+    <meta name="author" content="Amberes Consultora">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- HERO -->
-<header class="hero fade-in">
-    <img src="images/logo-amberes.png" alt="Amberes Consultora" class="logo">
+<!-- INDICADORES -->
+<div class="indicators">
+    <span>UF: <strong id="uf">–</strong></span>
+    <span>USD: <strong id="usd">–</strong></span>
+    <span>EUR: <strong id="eur">–</strong></span>
+    <span>IPC: <strong id="ipc">–</strong></span>
+    <span>UTM: <strong id="utm">–</strong></span>
+    <span>UTA: <strong id="uta">–</strong></span>
+</div>
 
-    <h1>Talento Senior que impulsa tu empresa</h1>
-    <p>Conectamos organizaciones con profesionales +50 confiables, experimentados y comprometidos</p>
-
-    <div class="social-icons">
-        <a href="https://www.instagram.com/amberes_rrhh" target="_blank" aria-label="Instagram">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" 
-         alt="Instagram"
-         class="social-instagram">
-</a>
-        </a>
-
-        <a href="https://www.linkedin.com/in/amberes-consulting-992a303ab/" target="_blank" aria-label="LinkedIn">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
-        </a>
+<!-- NAV -->
+<header class="navbar">
+    <div class="nav-container">
+        <img src="images/logo-amberes.png" alt="Amberes Consultora" class="logo">
+        <nav>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/amberes_rrhh" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
+                </a>
+                <a href="https://www.linkedin.com/in/amberes-consulting-992a303ab/" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
+                </a>
+            </div>
+        </nav>
     </div>
 </header>
 
+<!-- HERO -->
+<section class="hero">
+    <h1>Talento Senior que impulsa decisiones inteligentes</h1>
+    <p>Reclutamiento +50 y evaluación financiera para empresas que buscan estabilidad y experiencia.</p>
+</section>
+
 <!-- SERVICIOS -->
-<section class="services">
-    <h2 class="fade-in">Nuestros Servicios</h2>
+<section id="servicios" class="services">
+    <h2>Nuestros Servicios</h2>
 
     <div class="services-grid">
 
-        <div class="service-card fade-up">
-            <img src="images/empresas.jpg" alt="Evaluación de Proyectos">
-            <h3>Evaluación de Proyectos</h3>
-            <p>
-                Evaluación financiera, contabilidad, declaraciones de IVA,
-                declaraciones juradas, revisión de estados financieros
-                y análisis de proyectos de inversión para PYMES.
-            </p>
-        </div>
+        <article class="service-card">
+            <img src="images/empresas.jpg">
+            <h3>Evaluación de Proyectos y Gestión Financiera</h3>
+            <p>Contabilidad, IVA, declaraciones juradas, estados financieros y evaluación de inversiones.</p>
+        </article>
 
-        <div class="service-card fade-up">
-            <img src="images/postulantes.jpg" alt="Búsqueda Laboral +50">
-            <h3>Búsqueda de Trabajo +50</h3>
-            <p>
-                Acompañamos a profesionales senior en su reinserción laboral,
-                destacando experiencia, liderazgo y confiabilidad.
-            </p>
-        </div>
+        <article class="service-card">
+            <img src="images/postulantes.jpg">
+            <h3>Búsqueda laboral para talento senior (+50)</h3>
+            <p>Apoyamos procesos de reinserción laboral con enfoque humano y estratégico.</p>
+        </article>
 
-        <div class="service-card fade-up">
-            <img src="images/empresas.jpg" alt="Reclutamiento +50">
-            <h3>Reclutamiento y Selección +50</h3>
-            <p>
-                Conectamos empresas con talento senior alineado
-                a sus necesidades estratégicas y culturales.
-            </p>
-        </div>
+        <article class="service-card">
+            <img src="images/empresas.jpg">
+            <h3>Reclutamiento y Selección senior (+50)</h3>
+            <p>Menor rotación, mayor compromiso y equipos más estables.</p>
+        </article>
 
     </div>
 </section>
 
-<!-- FORMULARIO -->
-<section class="contact fade-in">
-    <h2>Formulario de Atención</h2>
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
+    <h2>Hablemos</h2>
+    <p>Déjanos tus datos y te contactamos.</p>
 
-    <form class="contact-form" action="https://formspree.io/f/mreabzdn" method="POST">
+    <form action="https://formspree.io/f/mreabzdn" method="POST" class="contact-form">
         <input type="text" name="nombre" placeholder="Nombre completo" required>
         <input type="tel" name="telefono" placeholder="Teléfono" required>
         <input type="email" name="email" placeholder="Correo electrónico" required>
 
-        <select name="tipo_servicio" required>
-            <option value="">Tipo de servicio</option>
-            <option>Evaluación de proyectos</option>
-            <option>Búsqueda laboral +50</option>
-            <option>Reclutamiento y selección +50</option>
-        </select>
-
-        <select name="que_busca" required>
-            <option value="">¿Qué busca?</option>
+        <select name="servicio" required>
+            <option value="">Servicio de interés</option>
             <option>Asesoría laboral</option>
-            <option>Servicio de reclutamiento</option>
-            <option>Servicio de evaluación financiera</option>
+            <option>Reclutamiento</option>
+            <option>Evaluación financiera</option>
         </select>
 
-        <button type="submit">Enviar consulta</button>
+        <textarea name="mensaje" placeholder="¿Qué estás buscando?" required></textarea>
+        <button type="submit">Enviar</button>
     </form>
 
-    <p class="contact-info">
-        📧 consultoraamberes@gmail.com
-    </p>
+    <p class="contact-info">📧 consultoraamberes@gmail.com · 📞 +56 9 5364 9876</p>
 </section>
 
 <footer>
-    © 2026 Amberes Consultora · Todos los derechos reservados
+    © Amberes Consultora · Talento Senior
 </footer>
 
+<script src="indicators.js"></script>
 </body>
 </html>
