@@ -121,5 +121,28 @@
 </footer>
 
 <script src="indicators.js"></script>
+
+<script>
+fetch("PEGA_AQUÍ_TU_URL_DEL_SCRIPT")
+  .then(res => res.json())
+  .then(ofertas => {
+    const contenedor = document.getElementById("ofertas");
+    contenedor.innerHTML = "";
+
+    ofertas.forEach(oferta => {
+      contenedor.innerHTML += `
+        <div class="oferta">
+          <h3>${oferta.Cargo}</h3>
+          <p>${oferta.Ubicacion} · ${oferta.Modalidad}</p>
+          <a href="${oferta.Link}" target="_blank">Postular</a>
+        </div>
+      `;
+    });
+  })
+  .catch(err => {
+    console.error("Error cargando ofertas:", err);
+  });
+</script>
+    
 </body>
 </html>
