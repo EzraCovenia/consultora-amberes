@@ -157,3 +157,22 @@ footer {
     .hero h1 { font-size: 34px; }
     .logo { height: 60px; }
 }
+/* SOCIAL ICONS CONTACT */
+.social-contact {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.social-contact img {
+    width: 26px;
+    height: 26px;
+    filter: invert(15%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-contact img:hover {
+    transform: translateY(-3px) scale(1.1);
+    opacity: 0.8;
+}
