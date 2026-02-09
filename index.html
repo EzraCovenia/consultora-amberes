@@ -10,18 +10,18 @@
 <body>
 
 <!-- HERO -->
-<header class="hero">
+<header class="hero fade-in">
     <img src="images/logo-amberes.png" alt="Amberes Consultora" class="logo">
 
     <h1>Talento Senior que impulsa tu empresa</h1>
     <p>Conectamos organizaciones con profesionales +50 confiables, experimentados y comprometidos</p>
 
     <div class="social-icons">
-        <a href="https://www.instagram.com/amberes_rrhh" target="_blank">
+        <a href="https://www.instagram.com/amberes_rrhh" target="_blank" aria-label="Instagram">
             <img src="images/instagram.svg" alt="Instagram">
         </a>
 
-        <a href="https://www.linkedin.com/in/amberes-consulting-992a303ab/" target="_blank">
+        <a href="https://www.linkedin.com/in/amberes-consulting-992a303ab/" target="_blank" aria-label="LinkedIn">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
         </a>
     </div>
@@ -29,31 +29,35 @@
 
 <!-- SERVICIOS -->
 <section class="services">
-    <h2>Nuestros Servicios</h2>
+    <h2 class="fade-in">Nuestros Servicios</h2>
 
     <div class="services-grid">
 
-        <div class="service-card">
+        <div class="service-card fade-up">
+            <img src="images/empresas.jpg" alt="Evaluación de Proyectos">
             <h3>Evaluación de Proyectos</h3>
             <p>
-                Asesoramos a pequeñas y medianas empresas en contabilidad, declaraciones de IVA,
-                declaraciones juradas, revisión de estados financieros y evaluación de proyectos de inversión.
+                Evaluación financiera, contabilidad, declaraciones de IVA,
+                declaraciones juradas, revisión de estados financieros
+                y análisis de proyectos de inversión para PYMES.
             </p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card fade-up">
+            <img src="images/postulantes.jpg" alt="Búsqueda Laboral +50">
             <h3>Búsqueda de Trabajo +50</h3>
             <p>
-                Apoyamos a profesionales senior en su reinserción laboral,
-                destacando su experiencia, confiabilidad y valor estratégico.
+                Acompañamos a profesionales senior en su reinserción laboral,
+                destacando experiencia, liderazgo y confiabilidad.
             </p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card fade-up">
+            <img src="images/empresas.jpg" alt="Reclutamiento +50">
             <h3>Reclutamiento y Selección +50</h3>
             <p>
-                Conectamos empresas con talento senior altamente calificado,
-                alineado a sus necesidades técnicas y culturales.
+                Conectamos empresas con talento senior alineado
+                a sus necesidades estratégicas y culturales.
             </p>
         </div>
 
@@ -61,22 +65,22 @@
 </section>
 
 <!-- FORMULARIO -->
-<section class="contact">
+<section class="contact fade-in">
     <h2>Formulario de Atención</h2>
 
-    <form class="contact-form">
-        <input type="text" placeholder="Nombre completo" required>
-        <input type="tel" placeholder="Teléfono" required>
-        <input type="email" placeholder="Correo electrónico" required>
+    <form class="contact-form" action="https://formspree.io/f/mreabzdn" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
 
-        <select required>
+        <select name="tipo_servicio" required>
             <option value="">Tipo de servicio</option>
             <option>Evaluación de proyectos</option>
             <option>Búsqueda laboral +50</option>
             <option>Reclutamiento y selección +50</option>
         </select>
 
-        <select required>
+        <select name="que_busca" required>
             <option value="">¿Qué busca?</option>
             <option>Asesoría laboral</option>
             <option>Servicio de reclutamiento</option>
@@ -87,7 +91,7 @@
     </form>
 
     <p class="contact-info">
-        📧 <strong>consultoraamberes@gmail.com</strong>
+        📧 consultoraamberes@gmail.com
     </p>
 </section>
 
