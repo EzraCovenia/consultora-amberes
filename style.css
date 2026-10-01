@@ -1,3437 +1,967 @@
-/* =========================================================
-AMBERES CONSULTORA
-STYLE.CSS — VERSION 2.0
-========================================================= */
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* =========================================================
-VARIABLES
-========================================================= */
+    <title>Amberes | Consultoría Financiera y Empresarial</title>
 
-:root {
+    <meta name="description"
+          content="Amberes | Consultoría financiera, evaluación de proyectos, control de gestión, asesoría tributaria, patentes comerciales, talento y soluciones para PYMES.">
 
-```
---navy: #102A43;
---navy-dark: #071827;
---navy-soft: #163B5C;
-
---amber: #C5A059;
---amber-light: #D9B978;
---amber-soft: #F5EEDC;
-
---white: #FFFFFF;
---off-white: #F8FAFC;
---light: #F2F5F8;
---light-blue: #EAF0F5;
-
---text: #243447;
---text-soft: #617284;
---text-light: #8A98A8;
-
---border: #E2E8F0;
-
---success: #3B8A6E;
-
---shadow-sm:
-    0 4px 15px rgba(16, 42, 67, 0.06);
-
---shadow:
-    0 15px 40px rgba(16, 42, 67, 0.09);
-
---shadow-lg:
-    0 25px 60px rgba(16, 42, 67, 0.14);
-
---radius: 14px;
-
---max-width: 1200px;
-```
-
-}
-
-/* =========================================================
-RESET
-========================================================= */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  }
-
-html {
-scroll-behavior: smooth;
-}
-
-body {
-
-```
-font-family:
-    'Inter',
-    sans-serif;
-
-color: var(--text);
-
-background: var(--white);
-
-line-height: 1.7;
-
-overflow-x: hidden;
-```
-
-}
-
-img {
-max-width: 100%;
-display: block;
-}
-
-a {
-text-decoration: none;
-color: inherit;
-}
-
-button,
-input,
-select,
-textarea {
-font-family: inherit;
-}
-
-/* =========================================================
-GLOBAL CONTAINERS
-========================================================= */
-
-.section-container {
-
-```
-width: 100%;
-
-max-width: var(--max-width);
-
-margin: 0 auto;
-
-padding-left: 30px;
-
-padding-right: 30px;
-```
-
-}
-
-/* =========================================================
-TYPOGRAPHY
-========================================================= */
-
-h1,
-h2,
-h3 {
-
-```
-color: var(--navy);
-
-line-height: 1.2;
-```
-
-}
-
-h1,
-h2 {
-
-```
-font-family:
-    'Playfair Display',
-    serif;
-```
-
-}
-
-h2 {
-
-```
-font-size: clamp(
-    34px,
-    4vw,
-    52px
-);
-```
-
-}
-
-h3 {
-
-```
-font-size: 21px;
-```
-
-}
-
-p {
-color: var(--text-soft);
-}
-
-/* =========================================================
-EYEBROW
-========================================================= */
-
-.eyebrow {
-
-```
-display: inline-block;
-
-color: var(--amber);
-
-font-size: 11px;
-
-font-weight: 700;
-
-letter-spacing: 2.5px;
-
-text-transform: uppercase;
-
-margin-bottom: 18px;
-```
-
-}
-
-/* =========================================================
-INDICATORS
-========================================================= */
-
-.indicators {
-
-```
-background:
-    var(--navy-dark);
-
-color:
-    #A9B8C8;
-
-font-size: 11px;
-
-letter-spacing: .3px;
-
-border-bottom:
-    1px solid
-    rgba(255,255,255,.06);
-```
-
-}
-
-.indicators-container {
-
-```
-max-width:
-    var(--max-width);
-
-margin:
-    0 auto;
-
-min-height:
-    34px;
-
-padding:
-    6px 30px;
-
-display:
-    flex;
-
-justify-content:
-    center;
-
-align-items:
-    center;
-
-gap:
-    28px;
-
-flex-wrap:
-    wrap;
-```
-
-}
-
-.indicators span {
-
-```
-white-space:
-    nowrap;
-```
-
-}
-
-.indicators strong {
-
-```
-color:
-    var(--white);
-
-margin-left:
-    4px;
-
-font-weight:
-    600;
-```
-
-}
-
-/* =========================================================
-NAVBAR
-========================================================= */
-
-.navbar {
-
-```
-position:
-    sticky;
-
-top:
-    0;
-
-z-index:
-    1000;
-
-background:
-    rgba(255,255,255,.97);
-
-backdrop-filter:
-    blur(12px);
-
-border-bottom:
-    1px solid
-    var(--border);
-```
-
-}
-
-.nav-container {
-
-```
-max-width:
-    var(--max-width);
-
-margin:
-    0 auto;
-
-padding:
-    12px 30px;
-
-display:
-    flex;
-
-align-items:
-    center;
-
-justify-content:
-    space-between;
-```
-
-}
-
-.brand {
-
-```
-display:
-    flex;
-
-align-items:
-    center;
-```
-
-}
-
-.logo {
-
-```
-height:
-    62px;
-
-width:
-    auto;
-```
-
-}
-
-.main-nav {
-
-```
-display:
-    flex;
-
-align-items:
-    center;
-
-gap:
-    4px;
-```
-
-}
-
-.main-nav > a {
-
-```
-position:
-    relative;
-
-padding:
-    10px 13px;
-
-color:
-    var(--text);
-
-font-size:
-    13px;
-
-font-weight:
-    600;
-
-transition:
-    color .25s ease;
-```
-
-}
-
-.main-nav > a:not(.nav-cta)::after {
-
-```
-content:
-    "";
-
-position:
-    absolute;
-
-bottom:
-    3px;
-
-left:
-    13px;
-
-width:
-    0;
-
-height:
-    2px;
-
-background:
-    var(--amber);
-
-transition:
-    width .25s ease;
-```
-
-}
-
-.main-nav > a:not(.nav-cta):hover {
-
-```
-color:
-    var(--navy);
-```
-
-}
-
-.main-nav > a:not(.nav-cta):hover::after {
-
-```
-width:
-    calc(100% - 26px);
-```
-
-}
-
-/* NAV CTA */
-
-.nav-cta {
-
-```
-background:
-    var(--navy);
-
-color:
-    var(--white) !important;
-
-border-radius:
-    7px;
-
-margin-left:
-    8px;
-
-padding:
-    10px 18px !important;
-
-transition:
-    background .25s ease,
-    transform .25s ease;
-```
-
-}
-
-.nav-cta:hover {
-
-```
-background:
-    var(--navy-soft);
-
-transform:
-    translateY(-2px);
-```
-
-}
-
-/* SOCIAL NAV */
-
-.social-icons {
-
-```
-display:
-    flex;
-
-align-items:
-    center;
-
-margin-left:
-    12px;
-
-padding-left:
-    12px;
-
-border-left:
-    1px solid
-    var(--border);
-```
-
-}
-
-.social-icons a {
-
-```
-display:
-    flex;
-
-align-items:
-    center;
-
-justify-content:
-    center;
-
-width:
-    34px;
-
-height:
-    34px;
-```
-
-}
-
-.social-icons img {
-
-```
-width:
-    17px;
-
-height:
-    17px;
-
-filter:
-    invert(19%)
-    sepia(15%)
-    saturate(1000%)
-    hue-rotate(170deg)
-    brightness(70%);
-
-transition:
-    transform .25s ease,
-    opacity .25s ease;
-```
-
-}
-
-.social-icons img:hover {
-
-```
-transform:
-    translateY(-2px);
-
-opacity:
-    .65;
-```
-
-}
-
-/* MOBILE MENU BUTTON */
-
-.menu-toggle {
-
-```
-display:
-    none;
-
-background:
-    none;
-
-border:
-    none;
-
-color:
-    var(--navy);
-
-font-size:
-    28px;
-
-cursor:
-    pointer;
-```
-
-}
-
-/* =========================================================
-HERO
-========================================================= */
-
-.hero {
-
-```
-position:
-    relative;
-
-min-height:
-    650px;
-
-display:
-    flex;
-
-align-items:
-    center;
-
-background:
-
-    radial-gradient(
-        circle at 80% 25%,
-        rgba(197,160,89,.13),
-        transparent 28%
-    ),
-
-    linear-gradient(
-        135deg,
-        var(--navy-dark),
-        var(--navy)
-    );
-
-color:
-    var(--white);
-
-overflow:
-    hidden;
-```
-
-}
-
-/* decorative line */
-
-.hero::before {
-
-```
-content:
-    "";
-
-position:
-    absolute;
-
-width:
-    600px;
-
-height:
-    600px;
-
-right:
-    -250px;
-
-bottom:
-    -300px;
-
-border:
-    1px solid
-    rgba(197,160,89,.16);
-
-border-radius:
-    50%;
-```
-
-}
-
-.hero-content {
-
-```
-max-width:
-    var(--max-width);
-
-width:
-    100%;
-
-margin:
-    0 auto;
-
-padding:
-    90px 30px;
-
-display:
-    grid;
-
-grid-template-columns:
-    1.25fr .75fr;
-
-align-items:
-    center;
-
-gap:
-    80px;
-```
-
-}
-
-.hero-text {
-
-```
-position:
-    relative;
-
-z-index:
-    2;
-```
-
-}
-
-.hero .eyebrow {
-
-```
-color:
-    var(--amber-light);
-```
-
-}
-
-.hero h1 {
-
-```
-color:
-    var(--white);
-
-font-size:
-    clamp(
-        44px,
-        5.5vw,
-        72px
-    );
-
-line-height:
-    1.08;
-
-margin-bottom:
-    28px;
-
-letter-spacing:
-    -1px;
-```
-
-}
-
-.hero h1 span {
-
-```
-display:
-    block;
-
-color:
-    var(--amber-light);
-```
-
-}
-
-.hero-description {
-
-```
-max-width:
-    650px;
-
-color:
-    #E0E8EF;
-
-font-size:
-    20px;
-
-line-height:
-    1.6;
-
-margin-bottom:
-    14px;
-```
-
-}
-
-.hero-subdescription {
-
-```
-color:
-    #9FB0C0;
-
-font-size:
-    15px;
-
-margin-bottom:
-    36px;
-```
-
-}
-
-.hero-buttons {
-
-```
-display:
-    flex;
-
-gap:
-    14px;
-
-flex-wrap:
-    wrap;
-```
-
-}
-
-/* HERO PANEL */
-
-.hero-panel {
-
-```
-position:
-    relative;
-
-z-index:
-    2;
-
-background:
-    rgba(255,255,255,.055);
-
-border:
-    1px solid
-    rgba(255,255,255,.12);
-
-border-radius:
-    18px;
-
-padding:
-    28px;
-
-backdrop-filter:
-    blur(15px);
-
-box-shadow:
-    0 25px 60px rgba(0,0,0,.18);
-```
-
-}
-
-.hero-panel-header {
-
-```
-display:
-    flex;
-
-justify-content:
-    space-between;
-
-align-items:
-    center;
-
-padding-bottom:
-    20px;
-
-margin-bottom:
-    8px;
-
-border-bottom:
-    1px solid
-    rgba(255,255,255,.1);
-
-color:
-    #C7D2DE;
-
-font-size:
-    11px;
-
-font-weight:
-    700;
-
-letter-spacing:
-    2px;
-```
-
-}
-
-.status-dot {
-
-```
-width:
-    7px;
-
-height:
-    7px;
-
-border-radius:
-    50%;
-
-background:
-    var(--success);
-
-box-shadow:
-    0 0 0 5px rgba(59,138,110,.12);
-```
-
-}
-
-.metric {
-
-```
-padding:
-    18px 0;
-
-border-bottom:
-    1px solid
-    rgba(255,255,255,.08);
-```
-
-}
-
-.metric:last-child {
-
-```
-border-bottom:
-    none;
-```
-
-}
-
-.metric small {
-
-```
-display:
-    block;
-
-color:
-    var(--amber-light);
-
-font-size:
-    9px;
-
-font-weight:
-    700;
-
-letter-spacing:
-    1.5px;
-
-margin-bottom:
-    5px;
-```
-
-}
-
-.metric strong {
-
-```
-color:
-    var(--white);
-
-font-size:
-    16px;
-
-font-weight:
-    500;
-```
-
-}
-
-/* =========================================================
-BUTTONS
-========================================================= */
-
-.btn {
-
-```
-display:
-    inline-flex;
-
-align-items:
-    center;
-
-justify-content:
-    center;
-
-min-height:
-    48px;
-
-padding:
-    12px 23px;
-
-border-radius:
-    7px;
-
-font-size:
-    13px;
-
-font-weight:
-    700;
-
-border:
-    1px solid
-    transparent;
-
-cursor:
-    pointer;
-
-transition:
-    transform .25s ease,
-    background .25s ease,
-    border-color .25s ease;
-```
-
-}
-
-.btn:hover {
-
-```
-transform:
-    translateY(-2px);
-```
-
-}
-
-.btn-primary {
-
-```
-background:
-    var(--amber);
-
-color:
-    var(--navy-dark);
-```
-
-}
-
-.btn-primary:hover {
-
-```
-background:
-    var(--amber-light);
-```
-
-}
-
-.btn-secondary {
-
-```
-border-color:
-    rgba(255,255,255,.28);
-
-color:
-    var(--white);
-```
-
-}
-
-.btn-secondary:hover {
-
-```
-background:
-    rgba(255,255,255,.08);
-```
-
-}
-
-.btn-light {
-
-```
-background:
-    var(--white);
-
-color:
-    var(--navy);
-```
-
-}
-
-.btn-light:hover {
-
-```
-background:
-    var(--amber-soft);
-```
-
-}
-
-/* =========================================================
-VALUE SECTION
-========================================================= */
-
-.value-section {
-
-```
-padding:
-    110px 0;
-
-background:
-    var(--white);
-
-text-align:
-    center;
-```
-
-}
-
-.value-section .section-container {
-
-```
-max-width:
-    900px;
-```
-
-}
-
-.value-section h2 {
-
-```
-margin-bottom:
-    28px;
-```
-
-}
-
-.value-section h2 span {
-
-```
-color:
-    var(--navy-soft);
-```
-
-}
-
-.section-intro {
-
-```
-max-width:
-    760px;
-
-margin:
-    0 auto;
-
-font-size:
-    17px;
-```
-
-}
-
-/* =========================================================
-SERVICES
-========================================================= */
-
-.services-section {
-
-```
-padding:
-    110px 0;
-
-background:
-    var(--off-white);
-```
-
-}
-
-.section-heading {
-
-```
-display:
-    flex;
-
-justify-content:
-    space-between;
-
-align-items:
-    flex-end;
-
-gap:
-    50px;
-
-margin-bottom:
-    55px;
-```
-
-}
-
-.section-heading h2 {
-
-```
-max-width:
-    650px;
-```
-
-}
-
-.section-heading > p {
-
-```
-max-width:
-    370px;
-
-font-size:
-    14px;
-```
-
-}
-
-.services-grid {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    repeat(3, 1fr);
-
-gap:
-    24px;
-```
-
-}
-
-.service-card {
-
-```
-position:
-    relative;
-
-background:
-    var(--white);
-
-border:
-    1px solid
-    var(--border);
-
-border-radius:
-    var(--radius);
-
-padding:
-    34px;
-
-min-height:
-    470px;
-
-display:
-    flex;
-
-flex-direction:
-    column;
-
-box-shadow:
-    var(--shadow-sm);
-
-transition:
-    transform .3s ease,
-    box-shadow .3s ease,
-    border-color .3s ease;
-```
-
-}
-
-.service-card:hover {
-
-```
-transform:
-    translateY(-7px);
-
-box-shadow:
-    var(--shadow);
-
-border-color:
-    rgba(197,160,89,.55);
-```
-
-}
-
-.service-card.featured {
-
-```
-border-top:
-    3px solid
-    var(--amber);
-```
-
-}
-
-.service-number {
-
-```
-position:
-    absolute;
-
-top:
-    24px;
-
-right:
-    28px;
-
-color:
-    #C8D2DC;
-
-font-size:
-    11px;
-
-font-weight:
-    700;
-
-letter-spacing:
-    1px;
-```
-
-}
-
-.service-icon {
-
-```
-width:
-    48px;
-
-height:
-    48px;
-
-display:
-    flex;
-
-align-items:
-    center;
-
-justify-content:
-    center;
-
-border-radius:
-    10px;
-
-background:
-    var(--amber-soft);
-
-color:
-    var(--navy);
-
-font-family:
-    'Playfair Display',
-    serif;
-
-font-size:
-    24px;
-
-margin-bottom:
-    25px;
-```
-
-}
-
-.service-card h3 {
-
-```
-margin-bottom:
-    14px;
-```
-
-}
-
-.service-card > p {
-
-```
-font-size:
-    13px;
-
-margin-bottom:
-    20px;
-```
-
-}
-
-.service-card ul {
-
-```
-list-style:
-    none;
-
-margin:
-    0 0 25px;
-```
-
-}
-
-.service-card li {
-
-```
-position:
-    relative;
-
-padding-left:
-    17px;
-
-margin-bottom:
-    7px;
-
-color:
-    var(--text-soft);
-
-font-size:
-    12px;
-```
-
-}
-
-.service-card li::before {
-
-```
-content:
-    "•";
-
-position:
-    absolute;
-
-left:
-    0;
-
-color:
-    var(--amber);
-
-font-weight:
-    700;
-```
-
-}
-
-.service-link {
-
-```
-margin-top:
-    auto;
-
-color:
-    var(--navy);
-
-font-size:
-    12px;
-
-font-weight:
-    700;
-```
-
-}
-
-.service-link:hover {
-
-```
-color:
-    var(--amber);
-```
-
-}
-
-/* =========================================================
-PYMES
-========================================================= */
-
-.pymes-section {
-
-```
-padding:
-    120px 0;
-
-background:
-    var(--white);
-```
-
-}
-
-.pymes-content {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    .9fr 1.1fr;
-
-gap:
-    100px;
-
-align-items:
-    center;
-```
-
-}
-
-.pymes-text h2 {
-
-```
-margin-bottom:
-    25px;
-```
-
-}
-
-.pymes-text h2 span {
-
-```
-color:
-    var(--navy-soft);
-```
-
-}
-
-.pymes-text p {
-
-```
-margin-bottom:
-    18px;
-
-font-size:
-    15px;
-```
-
-}
-
-.pymes-text .btn {
-
-```
-margin-top:
-    15px;
-```
-
-}
-
-.pymes-solutions {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    1fr 1fr;
-
-border-top:
-    1px solid
-    var(--border);
-```
-
-}
-
-.pyme-item {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    38px 1fr;
-
-gap:
-    15px;
-
-padding:
-    28px 15px;
-
-border-bottom:
-    1px solid
-    var(--border);
-```
-
-}
-
-.pyme-item:nth-child(odd) {
-
-```
-border-right:
-    1px solid
-    var(--border);
-```
-
-}
-
-.pyme-item > span {
-
-```
-color:
-    var(--amber);
-
-font-size:
-    11px;
-
-font-weight:
-    700;
-```
-
-}
-
-.pyme-item h3 {
-
-```
-font-size:
-    16px;
-
-margin-bottom:
-    5px;
-```
-
-}
-
-.pyme-item p {
-
-```
-font-size:
-    12px;
-```
-
-}
-
-/* =========================================================
-PROJECT SECTION
-========================================================= */
-
-.project-section {
-
-```
-padding:
-    90px 0;
-
-background:
-    var(--off-white);
-```
-
-}
-
-.project-box {
-
-```
-position:
-    relative;
-
-overflow:
-    hidden;
-
-display:
-    grid;
-
-grid-template-columns:
-    1.1fr .9fr;
-
-gap:
-    70px;
-
-padding:
-    65px;
-
-border-radius:
-    20px;
-
-background:
-    linear-gradient(
-        135deg,
-        var(--navy-dark),
-        var(--navy-soft)
-    );
-
-box-shadow:
-    var(--shadow-lg);
-```
-
-}
-
-.project-copy {
-
-```
-position:
-    relative;
-
-z-index:
-    2;
-```
-
-}
-
-.project-copy .eyebrow {
-
-```
-color:
-    var(--amber-light);
-```
-
-}
-
-.project-copy h2 {
-
-```
-color:
-    var(--white);
-
-margin-bottom:
-    22px;
-```
-
-}
-
-.project-copy p {
-
-```
-color:
-    #B7C5D2;
-
-max-width:
-    620px;
-
-font-size:
-    14px;
-
-margin-bottom:
-    30px;
-```
-
-}
-
-.project-metrics {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    1fr 1fr;
-
-gap:
-    1px;
-
-background:
-    rgba(255,255,255,.1);
-```
-
-}
-
-.project-metrics div {
-
-```
-padding:
-    25px;
-
-background:
-    rgba(255,255,255,.045);
-```
-
-}
-
-.project-metrics small {
-
-```
-display:
-    block;
-
-color:
-    var(--amber-light);
-
-font-size:
-    9px;
-
-font-weight:
-    700;
-
-letter-spacing:
-    1.5px;
-
-margin-bottom:
-    7px;
-```
-
-}
-
-.project-metrics strong {
-
-```
-color:
-    var(--white);
-
-font-size:
-    17px;
-```
-
-}
-
-/* =========================================================
-TALENT
-========================================================= */
-
-.talent-section {
-
-```
-padding:
-    115px 0;
-
-background:
-    var(--white);
-```
-
-}
-
-.talent-grid {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    repeat(3,1fr);
-
-border-top:
-    1px solid
-    var(--border);
-
-border-bottom:
-    1px solid
-    var(--border);
-```
-
-}
-
-.talent-grid article {
-
-```
-padding:
-    38px;
-```
-
-}
-
-.talent-grid article + article {
-
-```
-border-left:
-    1px solid
-    var(--border);
-```
-
-}
-
-.talent-number {
-
-```
-color:
-    var(--amber);
-
-font-size:
-    11px;
-
-font-weight:
-    700;
-```
-
-}
-
-.talent-grid h3 {
-
-```
-margin:
-    15px 0 12px;
-```
-
-}
-
-.talent-grid p {
-
-```
-font-size:
-    13px;
-
-margin-bottom:
-    22px;
-```
-
-}
-
-.talent-grid a {
-
-```
-color:
-    var(--navy);
-
-font-size:
-    12px;
-
-font-weight:
-    700;
-```
-
-}
-
-/* =========================================================
-METHODOLOGY
-========================================================= */
-
-.method-section {
-
-```
-padding:
-    115px 0;
-
-background:
-    var(--light);
-```
-
-}
-
-.method-header {
-
-```
-max-width:
-    720px;
-
-margin-bottom:
-    55px;
-```
-
-}
-
-.method-header h2 {
-
-```
-margin-bottom:
-    20px;
-```
-
-}
-
-.method-header h2 span {
-
-```
-color:
-    var(--navy-soft);
-```
-
-}
-
-.method-grid {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    repeat(4,1fr);
-
-border-top:
-    1px solid
-    var(--border);
-```
-
-}
-
-.method-step {
-
-```
-padding:
-    30px 25px;
-```
-
-}
-
-.method-step + .method-step {
-
-```
-border-left:
-    1px solid
-    var(--border);
-```
-
-}
-
-.method-step > span {
-
-```
-display:
-    block;
-
-color:
-    var(--amber);
-
-font-size:
-    12px;
-
-font-weight:
-    700;
-
-margin-bottom:
-    20px;
-```
-
-}
-
-.method-step h3 {
-
-```
-margin-bottom:
-    10px;
-```
-
-}
-
-.method-step p {
-
-```
-font-size:
-    12px;
-```
-
-}
-
-/* =========================================================
-AMBERES INTELLIGENCE
-========================================================= */
-
-.intelligence-section {
-
-```
-padding:
-    100px 0;
-
-background:
-    var(--white);
-```
-
-}
-
-.intelligence-box {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    1fr 1fr;
-
-gap:
-    70px;
-
-align-items:
-    center;
+    <meta name="author" content="Amberes Consultora">
 
-padding:
-    65px;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-border:
-    1px solid
-    var(--border);
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
 
-border-radius:
-    20px;
+    <link rel="stylesheet" href="style.css">
+</head>
 
-background:
-    linear-gradient(
-        145deg,
-        #F9FAFC,
-        #EEF3F7
-    );
-```
-
-}
-
-.intelligence-content h2 {
-
-```
-font-size:
-    clamp(
-        36px,
-        4vw,
-        55px
-    );
-
-margin-bottom:
-    22px;
-```
-
-}
-
-.intelligence-content h2 span {
-
-```
-color:
-    var(--amber);
-```
-
-}
-
-.intelligence-content p {
-
-```
-max-width:
-    550px;
-
-margin-bottom:
-    15px;
-```
-
-}
-
-.intelligence-note {
-
-```
-font-size:
-    12px;
-
-color:
-    var(--text-light);
-
-margin-bottom:
-    25px !important;
-```
-
-}
-
-/* DASHBOARD MOCKUP */
-
-.intelligence-visual {
-
-```
-display:
-    flex;
-
-justify-content:
-    center;
-
-align-items:
-    center;
-```
-
-}
-
-.dashboard-card {
-
-```
-width:
-    min(100%, 400px);
-
-padding:
-    26px;
-
-border-radius:
-    15px;
-
-background:
-    var(--navy-dark);
-
-box-shadow:
-    var(--shadow-lg);
-
-transform:
-    rotate(1deg);
-```
-
-}
-
-.dashboard-top {
-
-```
-display:
-    flex;
-
-justify-content:
-    space-between;
-
-color:
-    #8294A5;
-
-font-size:
-    8px;
-
-font-weight:
-    700;
-
-letter-spacing:
-    1.3px;
-
-padding-bottom:
-    18px;
-
-border-bottom:
-    1px solid
-    rgba(255,255,255,.08);
-```
-
-}
-
-.dashboard-top span:last-child {
-
-```
-color:
-    #65A98B;
-```
-
-}
-
-.dashboard-value {
-
-```
-padding:
-    30px 0 20px;
-```
-
-}
-
-.dashboard-value small {
-
-```
-display:
-    block;
-
-color:
-    #8999A9;
-
-font-size:
-    9px;
-
-letter-spacing:
-    1px;
-```
-
-}
-
-.dashboard-value strong {
-
-```
-display:
-    block;
-
-color:
-    var(--white);
-
-font-size:
-    40px;
-
-font-weight:
-    500;
-```
-
-}
-
-.dashboard-bars {
-
-```
-height:
-    130px;
-
-display:
-    flex;
-
-align-items:
-    flex-end;
-
-gap:
-    12px;
-
-padding-top:
-    15px;
-
-border-top:
-    1px solid
-    rgba(255,255,255,.07);
-```
-
-}
-
-.dashboard-bars span {
-
-```
-flex:
-    1;
-
-background:
-    var(--amber);
-
-opacity:
-    .8;
-
-border-radius:
-    3px 3px 0 0;
-```
-
-}
-
-/* =========================================================
-ABOUT
-========================================================= */
-
-.about-section {
-
-```
-padding:
-    110px 0;
-
-background:
-    var(--off-white);
-```
-
-}
-
-.about-grid {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    .8fr 1.2fr;
-
-gap:
-    100px;
-```
-
-}
-
-.about-grid h2 {
-
-```
-max-width:
-    480px;
-```
-
-}
-
-.about-grid p {
-
-```
-font-size:
-    15px;
-
-margin-bottom:
-    20px;
-```
-
-}
-
-/* =========================================================
-CONTACT
-========================================================= */
-
-.contact-section {
-
-```
-padding:
-    120px 0;
-
-background:
-    var(--white);
-```
-
-}
-
-.contact-grid {
+<body>
 
-```
-display:
-    grid;
-
-grid-template-columns:
-    .8fr 1.2fr;
-
-gap:
-    100px;
-
-align-items:
-    start;
-```
-
-}
-
-.contact-copy h2 {
-
-```
-margin-bottom:
-    24px;
-```
-
-}
-
-.contact-copy > p {
-
-```
-max-width:
-    500px;
-
-font-size:
-    15px;
-
-margin-bottom:
-    35px;
-```
-
-}
-
-.contact-details {
-
-```
-display:
-    flex;
-
-flex-direction:
-    column;
-
-gap:
-    15px;
-```
-
-}
-
-.contact-details a {
-
-```
-display:
-    flex;
-
-flex-direction:
-    column;
-
-color:
-    var(--navy);
-
-font-size:
-    14px;
-
-font-weight:
-    600;
-```
-
-}
-
-.contact-details span {
-
-```
-color:
-    var(--amber);
-
-font-size:
-    9px;
-
-letter-spacing:
-    1.5px;
-
-margin-bottom:
-    2px;
-```
-
-}
-
-/* FORM */
-
-.contact-form {
-
-```
-padding:
-    38px;
-
-border:
-    1px solid
-    var(--border);
-
-border-radius:
-    15px;
-
-background:
-    var(--off-white);
-
-box-shadow:
-    var(--shadow-sm);
-
-display:
-    flex;
-
-flex-direction:
-    column;
-
-gap:
-    15px;
-```
-
-}
-
-.form-row {
-
-```
-display:
-    grid;
-
-grid-template-columns:
-    1fr 1fr;
-
-gap:
-    15px;
-```
-
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-
-```
-width:
-    100%;
-
-padding:
-    14px 15px;
-
-background:
-    var(--white);
-
-border:
-    1px solid
-    #D7E0E8;
-
-border-radius:
-    7px;
-
-color:
-    var(--text);
-
-font-size:
-    13px;
-
-outline:
-    none;
-
-transition:
-    border-color .25s ease,
-    box-shadow .25s ease;
-```
-
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-
-```
-border-color:
-    var(--amber);
-
-box-shadow:
-    0 0 0 3px
-    rgba(197,160,89,.12);
-```
-
-}
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-.contact-form textarea {
+<header class="site-header">
 
-```
-resize:
-    vertical;
-
-min-height:
-    140px;
-```
-
-}
-
-.contact-form button {
+    <div class="header-inner">
 
-```
-border:
-    none;
-
-width:
-    100%;
-```
+        <a href="#inicio" class="brand">
+            <img src="images/logo-amberes.png" alt="Amberes Consultora">
+        </a>
 
-}
+        <nav class="main-nav" id="mainNav">
 
-.form-disclaimer {
+            <a href="#servicios">Servicios</a>
+            <a href="#metodologia">Metodología</a>
+            <a href="#pymes">PYMES</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto" class="nav-contact">Contacto</a>
 
-```
-color:
-    var(--text-light);
+        </nav>
 
-font-size:
-    10px;
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
 
-text-align:
-    center;
-```
+    </div>
 
-}
+</header>
 
-/* =========================================================
-SOCIAL CONTACT
-========================================================= */
 
-.social-contact {
+<main>
 
-```
-display:
-    flex;
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-justify-content:
-    center;
+<section class="hero" id="inicio">
 
-gap:
-    20px;
+    <div class="hero-inner">
 
-padding:
-    20px;
+        <div class="hero-copy">
 
-background:
-    var(--white);
-```
+            <p class="eyebrow">
+                CONSULTORÍA FINANCIERA & EMPRESARIAL
+            </p>
 
-}
+            <h1>
+                Decisiones más claras.<br>
+                <em>Negocios mejor gestionados.</em>
+            </h1>
 
-.social-contact a {
+            <p class="hero-description">
+                Transformamos información, proyectos y oportunidades
+                en decisiones con fundamento.
+            </p>
 
-```
-width:
-    40px;
+            <div class="hero-actions">
 
-height:
-    40px;
+                <a href="#contacto" class="button button-primary">
+                    Conversemos
+                </a>
 
-display:
-    flex;
+                <a href="#servicios" class="text-link">
+                    Conocer nuestros servicios
+                    <span>→</span>
+                </a>
 
-align-items:
-    center;
+            </div>
 
-justify-content:
-    center;
+        </div>
 
-border:
-    1px solid
-    var(--border);
+        <div class="hero-side">
 
-border-radius:
-    50%;
+            <div class="hero-line"></div>
 
-transition:
-    transform .25s ease,
-    border-color .25s ease;
-```
+            <p>
+                Finanzas · Gestión · Proyectos · Personas
+            </p>
 
-}
+            <span>
+                SANTIAGO · CHILE
+            </span>
 
-.social-contact a:hover {
+        </div>
 
-```
-transform:
-    translateY(-3px);
-
-border-color:
-    var(--amber);
-```
+    </div>
 
-}
+</section>
 
-.social-contact img {
 
-```
-width:
-    18px;
-
-height:
-    18px;
-
-filter:
-    invert(20%)
-    sepia(10%)
-    saturate(1000%)
-    hue-rotate(170deg)
-    brightness(70%);
-```
+<!-- =========================================================
+     INTRO
+========================================================= -->
 
-}
+<section class="intro-section">
 
-/* =========================================================
-FOOTER
-========================================================= */
+    <div class="container intro-grid">
 
-footer {
+        <div>
+            <p class="section-number">01 / AMBERES</p>
+        </div>
 
-```
-background:
-    var(--navy-dark);
+        <div class="intro-content">
 
-color:
-    #93A5B5;
+            <h2>
+                Información que se convierte
+                <span>en decisiones.</span>
+            </h2>
 
-padding:
-    55px 0 20px;
-```
+            <p>
+                Las empresas no necesitan más información.
+                Necesitan entenderla, interpretarla y utilizarla
+                para tomar mejores decisiones.
+            </p>
 
-}
+            <p>
+                En Amberes combinamos análisis financiero,
+                visión empresarial y herramientas de gestión
+                para acompañar decisiones relevantes.
+            </p>
 
-.footer-container {
+        </div>
 
-```
-max-width:
-    var(--max-width);
+    </div>
 
-margin:
-    0 auto;
+</section>
 
-padding:
-    0 30px 40px;
 
-display:
-    grid;
+<!-- =========================================================
+     SERVICIOS
+========================================================= -->
 
-grid-template-columns:
-    1.2fr 1fr 1fr;
+<section class="services-section" id="servicios">
 
-gap:
-    60px;
+    <div class="container">
 
-border-bottom:
-    1px solid
-    rgba(255,255,255,.08);
-```
+        <div class="section-heading">
 
-}
+            <div>
+                <p class="section-number">02 / ESPECIALIDADES</p>
 
-.footer-brand img {
+                <h2>
+                    Áreas de<br>
+                    <em>especialización</em>
+                </h2>
+            </div>
 
-```
-width:
-    150px;
+            <p class="section-intro">
+                Servicios diseñados para empresas, proyectos
+                y profesionales que necesitan mayor claridad
+                para gestionar.
+            </p>
 
-height:
-    auto;
+        </div>
 
-margin-bottom:
-    10px;
 
-filter:
-    brightness(0)
-    invert(1);
-```
+        <div class="services-list">
 
-}
+            <article class="service-item">
 
-.footer-brand p {
+                <span class="service-number">01</span>
 
-```
-color:
-    #8193A4;
-
-font-size:
-    11px;
-```
+                <div class="service-main">
 
-}
+                    <h3>Finanzas & Control de Gestión</h3>
 
-.footer-links {
+                    <p>
+                        Planificación financiera, presupuesto,
+                        forecast, análisis de resultados,
+                        rentabilidad, flujo de caja y KPIs.
+                    </p>
 
-```
-display:
-    flex;
+                    <span class="service-tags">
+                        FP&A · Budget · Forecast · KPIs · P&L
+                    </span>
 
-flex-direction:
-    column;
+                </div>
 
-gap:
-    8px;
-```
+                <span class="service-arrow">↗</span>
 
-}
+            </article>
 
-.footer-links a {
 
-```
-color:
-    #A8B6C3;
+            <article class="service-item">
 
-font-size:
-    12px;
+                <span class="service-number">02</span>
 
-transition:
-    color .25s ease;
-```
+                <div class="service-main">
 
-}
+                    <h3>Evaluación de Proyectos</h3>
 
-.footer-links a:hover {
+                    <p>
+                        Modelación financiera y análisis de
+                        escenarios para evaluar inversiones,
+                        proyectos y nuevas oportunidades.
+                    </p>
 
-```
-color:
-    var(--amber-light);
-```
+                    <span class="service-tags">
+                        VAN · TIR · Flujos · Escenarios · Sensibilidad
+                    </span>
 
-}
+                </div>
 
-.footer-contact {
+                <span class="service-arrow">↗</span>
 
-```
-display:
-    flex;
+            </article>
 
-flex-direction:
-    column;
 
-gap:
-    10px;
-```
+            <article class="service-item">
 
-}
+                <span class="service-number">03</span>
 
-.footer-contact a {
+                <div class="service-main">
 
-```
-color:
-    #A8B6C3;
-
-font-size:
-    12px;
-```
+                    <h3>Asesoría Tributaria</h3>
 
-}
+                    <p>
+                        Apoyo en planificación, análisis y
+                        coordinación de materias tributarias
+                        para empresas y proyectos.
+                    </p>
 
-.footer-contact a:hover {
+                    <span class="service-tags">
+                        Planificación · Cumplimiento · Coordinación
+                    </span>
 
-```
-color:
-    var(--amber-light);
-```
+                </div>
 
-}
+                <span class="service-arrow">↗</span>
 
-.footer-bottom {
+            </article>
 
-```
-max-width:
-    var(--max-width);
 
-margin:
-    0 auto;
+            <article class="service-item">
 
-padding:
-    18px 30px 0;
+                <span class="service-number">04</span>
 
-display:
-    flex;
+                <div class="service-main">
 
-justify-content:
-    space-between;
+                    <h3>Patentes Comerciales</h3>
 
-gap:
-    20px;
+                    <p>
+                        Apoyo y acompañamiento en procesos
+                        relacionados con patentes comerciales
+                        municipales.
+                    </p>
 
-color:
-    #66798A;
+                    <span class="service-tags">
+                        Gestión · Documentación · Coordinación
+                    </span>
 
-font-size:
-    10px;
-```
+                </div>
 
-}
+                <span class="service-arrow">↗</span>
 
-/* =========================================================
-RESPONSIVE — TABLET
-========================================================= */
+            </article>
 
-@media (max-width: 1050px) {
 
-```
-.main-nav > a {
+            <article class="service-item">
 
-    padding:
-        9px 8px;
+                <span class="service-number">05</span>
 
-    font-size:
-        12px;
+                <div class="service-main">
 
-}
+                    <h3>Personas & Talento Senior</h3>
 
-.hero-content {
+                    <p>
+                        Soluciones orientadas a la gestión de
+                        personas, experiencia profesional y
+                        talento +50.
+                    </p>
 
-    gap:
-        45px;
+                    <span class="service-tags">
+                        Personas · Experiencia · Talento +50
+                    </span>
 
-}
+                </div>
 
-.services-grid {
+                <span class="service-arrow">↗</span>
 
-    grid-template-columns:
-        repeat(2,1fr);
+            </article>
 
-}
 
-.project-box {
+            <article class="service-item">
 
-    gap:
-        40px;
+                <span class="service-number">06</span>
 
-    padding:
-        50px;
+                <div class="service-main">
 
-}
+                    <h3>Soluciones para PYMES</h3>
 
-.pymes-content,
-.about-grid,
-.contact-grid {
+                    <p>
+                        Una estructura de gestión financiera y
+                        empresarial adaptada a las necesidades
+                        de pequeñas y medianas empresas.
+                    </p>
 
-    gap:
-        60px;
+                    <span class="service-tags">
+                        Gestión · Control · Finanzas · Información
+                    </span>
 
-}
-```
+                </div>
 
-}
+                <span class="service-arrow">↗</span>
 
-/* =========================================================
-RESPONSIVE — MOBILE
-========================================================= */
+            </article>
 
-@media (max-width: 768px) {
+        </div>
 
-```
-/* INDICATORS */
+    </div>
 
-.indicators-container {
+</section>
 
-    gap:
-        12px 18px;
 
-    padding:
-        7px 15px;
+<!-- =========================================================
+     FRASE CENTRAL
+========================================================= -->
 
-    font-size:
-        10px;
+<section class="statement-section">
 
-}
+    <div class="container">
 
+        <p class="section-number">03 / NUESTRA MIRADA</p>
 
-/* NAV */
+        <h2>
+            No se trata solamente<br>
+            de <em>controlar.</em>
+        </h2>
 
-.nav-container {
+        <p class="statement-large">
+            Se trata de comprender qué está ocurriendo,
+            por qué está ocurriendo y qué decisión
+            tomar a continuación.
+        </p>
 
-    padding:
-        10px 20px;
+    </div>
 
-}
+</section>
 
-.logo {
 
-    height:
-        54px;
+<!-- =========================================================
+     PYMES
+========================================================= -->
 
-}
+<section class="pymes-section" id="pymes">
 
-.menu-toggle {
+    <div class="container pymes-grid">
 
-    display:
-        block;
+        <div class="pymes-label">
+            <p class="section-number">04 / PYMES</p>
+        </div>
 
-}
+        <div class="pymes-content">
 
-.main-nav {
+            <p class="eyebrow">
+                GESTIÓN SIN SOBRECARGAR LA ESTRUCTURA
+            </p>
 
-    position:
-        absolute;
+            <h2>
+                Tu empresa no siempre
+                necesita un equipo más grande.
+                <em>Necesita mejor información.</em>
+            </h2>
 
-    top:
-        100%;
+            <p>
+                Muchas PYMES crecen antes de contar con una
+                estructura de gestión financiera acorde a ese
+                crecimiento.
+            </p>
 
-    left:
-        0;
+            <p>
+                Amberes puede convertirse en ese apoyo externo:
+                información financiera, seguimiento, análisis y
+                herramientas para tomar decisiones con mayor
+                visibilidad.
+            </p>
 
-    right:
-        0;
+            <a href="#contacto" class="button button-dark">
+                Hablemos de tu empresa
+            </a>
 
-    display:
-        none;
+        </div>
 
-    flex-direction:
-        column;
+    </div>
 
-    align-items:
-        stretch;
+</section>
 
-    background:
-        var(--white);
 
-    border-bottom:
-        1px solid
-        var(--border);
+<!-- =========================================================
+     METODOLOGÍA
+========================================================= -->
 
-    box-shadow:
-        var(--shadow);
+<section class="method-section" id="metodologia">
 
-    padding:
-        15px 20px 20px;
+    <div class="container">
 
-}
+        <div class="section-heading method-heading">
 
-.main-nav.active {
+            <div>
+                <p class="section-number">05 / METODOLOGÍA</p>
 
-    display:
-        flex;
+                <h2>
+                    Una forma simple<br>
+                    de <em>trabajar.</em>
+                </h2>
+            </div>
 
-}
+            <p class="section-intro">
+                Cada situación es diferente. Nuestro enfoque
+                comienza entendiendo el problema antes de
+                proponer una solución.
+            </p>
 
-.main-nav > a {
+        </div>
 
-    padding:
-        12px 8px;
 
-}
+        <div class="method-grid">
 
-.main-nav > a:not(.nav-cta)::after {
+            <div class="method-step">
 
-    display:
-        none;
+                <span>01</span>
 
-}
+                <h3>Entendemos</h3>
 
-.nav-cta {
+                <p>
+                    Conocemos el contexto, los objetivos y
+                    las variables que realmente importan.
+                </p>
 
-    margin:
-        7px 0;
+            </div>
 
-    text-align:
-        center;
 
-}
+            <div class="method-step">
 
-.social-icons {
+                <span>02</span>
 
-    margin:
-        8px 0 0;
+                <h3>Analizamos</h3>
 
-    padding:
-        10px 0 0;
+                <p>
+                    Ordenamos información, identificamos
+                    variables y construimos escenarios.
+                </p>
 
-    border-left:
-        none;
+            </div>
 
-    border-top:
-        1px solid
-        var(--border);
 
-    justify-content:
-        center;
+            <div class="method-step">
 
-}
+                <span>03</span>
 
+                <h3>Proponemos</h3>
 
-/* HERO */
+                <p>
+                    Convertimos el análisis en alternativas
+                    concretas para decidir.
+                </p>
 
-.hero {
+            </div>
 
-    min-height:
-        auto;
 
-}
+            <div class="method-step">
 
-.hero-content {
+                <span>04</span>
 
-    grid-template-columns:
-        1fr;
+                <h3>Acompañamos</h3>
 
-    padding:
-        80px 25px;
+                <p>
+                    Seguimos la implementación y ayudamos
+                    a transformar las decisiones en gestión.
+                </p>
 
-    gap:
-        45px;
+            </div>
 
-}
+        </div>
 
-.hero h1 {
+    </div>
 
-    font-size:
-        43px;
+</section>
 
-}
 
-.hero-description {
+<!-- =========================================================
+     AMBERES INTELLIGENCE
+========================================================= -->
 
-    font-size:
-        17px;
+<section class="intelligence-section">
 
-}
+    <div class="container intelligence-inner">
 
-.hero-panel {
+        <div class="intelligence-copy">
 
-    max-width:
-        500px;
+            <p class="section-number">
+                06 / TECNOLOGÍA
+            </p>
 
-}
+            <p class="eyebrow">
+                PRÓXIMAMENTE
+            </p>
 
+            <h2>
+                Amberes<br>
+                <em>Intelligence™</em>
+            </h2>
 
-/* GLOBAL */
+            <p>
+                Una nueva generación de herramientas para
+                transformar información financiera y operacional
+                en gestión.
+            </p>
 
-.section-container {
+            <span class="coming-soon">
+                FINANCE · CONTROL · INSIGHTS
+            </span>
 
-    padding-left:
-        22px;
+        </div>
 
-    padding-right:
-        22px;
 
-}
+        <div class="intelligence-visual">
 
-.value-section,
-.services-section,
-.pymes-section,
-.talent-section,
-.method-section,
-.intelligence-section,
-.about-section,
-.contact-section {
+            <div class="dashboard-card">
 
-    padding:
-        80px 0;
+                <div class="dashboard-top">
+                    <span>AMBERES INTELLIGENCE</span>
+                    <span>01 / 04</span>
+                </div>
 
-}
+                <div class="dashboard-title">
+                    Gestión financiera
+                </div>
 
+                <div class="dashboard-chart">
 
-/* HEADINGS */
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
-.section-heading {
+                </div>
 
-    display:
-        block;
+                <div class="dashboard-footer">
 
-    margin-bottom:
-        40px;
+                    <div>
+                        <small>EBITDA</small>
+                        <strong>+12,4%</strong>
+                    </div>
 
-}
+                    <div>
+                        <small>CASH FLOW</small>
+                        <strong>+8,7%</strong>
+                    </div>
 
-.section-heading > p {
+                    <div>
+                        <small>MARGEN</small>
+                        <strong>24,1%</strong>
+                    </div>
 
-    margin-top:
-        20px;
+                </div>
 
-}
+            </div>
 
+        </div>
 
-/* SERVICES */
+    </div>
 
-.services-grid {
+</section>
 
-    grid-template-columns:
-        1fr;
 
-}
+<!-- =========================================================
+     NOSOTROS
+========================================================= -->
 
-.service-card {
+<section class="about-section" id="nosotros">
 
-    min-height:
-        auto;
+    <div class="container about-grid">
 
-}
+        <div>
+            <p class="section-number">07 / AMBERES</p>
+        </div>
 
+        <div class="about-content">
 
-/* PYMES */
+            <h2>
+                Consultoría con una
+                mirada <em>empresarial.</em>
+            </h2>
 
-.pymes-content {
+            <p>
+                Amberes nace con una idea sencilla:
+                entregar herramientas y análisis que permitan
+                tomar decisiones empresariales con mayor
+                claridad.
+            </p>
 
-    grid-template-columns:
-        1fr;
+            <p>
+                Trabajamos desde una perspectiva práctica,
+                combinando finanzas, gestión y análisis para
+                abordar problemas concretos.
+            </p>
 
-    gap:
-        50px;
+            <div class="about-signature">
+                <span>AMBERES</span>
+                <small>CONSULTORÍA FINANCIERA & EMPRESARIAL</small>
+            </div>
 
-}
+        </div>
 
-.pymes-solutions {
+    </div>
 
-    grid-template-columns:
-        1fr;
+</section>
 
-}
 
-.pyme-item:nth-child(odd) {
+<!-- =========================================================
+     CONTACTO
+========================================================= -->
 
-    border-right:
-        none;
+<section class="contact-section" id="contacto">
 
-}
+    <div class="container contact-grid">
 
+        <div class="contact-intro">
 
-/* PROJECT */
+            <p class="section-number">08 / CONTACTO</p>
 
-.project-box {
+            <h2>
+                Hablemos de<br>
+                <em>tu próximo desafío.</em>
+            </h2>
 
-    grid-template-columns:
-        1fr;
+            <p>
+                Cuéntanos brevemente qué necesitas.
+                Revisaremos tu situación y te contactaremos.
+            </p>
 
-    padding:
-        40px 28px;
+            <div class="contact-details">
 
-    gap:
-        40px;
+                <a href="mailto:consultoraamberes@gmail.com">
+                    consultoraamberes@gmail.com
+                </a>
 
-}
+                <a href="tel:+56953649876">
+                    +56 9 5364 9876
+                </a>
 
+            </div>
 
-/* TALENT */
+        </div>
 
-.talent-grid {
 
-    grid-template-columns:
-        1fr;
+        <form
+            class="contact-form"
+            action="https://formspree.io/f/mreabzdn"
+            method="POST">
 
-}
+            <div class="form-field">
 
-.talent-grid article + article {
+                <label for="nombre">
+                    Nombre
+                </label>
 
-    border-left:
-        none;
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required>
 
-    border-top:
-        1px solid
-        var(--border);
+            </div>
 
-}
 
+            <div class="form-field">
 
-/* METHOD */
+                <label for="email">
+                    Correo electrónico
+                </label>
 
-.method-grid {
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="tu@email.com"
+                    required>
 
-    grid-template-columns:
-        1fr 1fr;
+            </div>
 
-}
 
-.method-step:nth-child(3) {
+            <div class="form-field">
 
-    border-left:
-        none;
+                <label for="empresa">
+                    Empresa
+                </label>
 
-    border-top:
-        1px solid
-        var(--border);
+                <input
+                    type="text"
+                    id="empresa"
+                    name="empresa"
+                    placeholder="Nombre de la empresa">
 
-}
+            </div>
 
-.method-step:nth-child(4) {
 
-    border-top:
-        1px solid
-        var(--border);
+            <div class="form-field">
 
-}
+                <label for="servicio">
+                    ¿En qué podemos ayudarte?
+                </label>
 
+                <select id="servicio" name="servicio">
 
-/* INTELLIGENCE */
+                    <option value="">
+                        Selecciona una opción
+                    </option>
 
-.intelligence-box {
+                    <option value="finanzas">
+                        Finanzas & Control de Gestión
+                    </option>
 
-    grid-template-columns:
-        1fr;
+                    <option value="proyectos">
+                        Evaluación de Proyectos
+                    </option>
 
-    padding:
-        40px 25px;
+                    <option value="tributario">
+                        Asesoría Tributaria
+                    </option>
 
-    gap:
-        45px;
+                    <option value="patentes">
+                        Patentes Comerciales
+                    </option>
 
-}
+                    <option value="personas">
+                        Personas & Talento
+                    </option>
 
-.dashboard-card {
+                    <option value="pymes">
+                        Soluciones para PYMES
+                    </option>
 
-    transform:
-        none;
+                    <option value="otro">
+                        Otro
+                    </option>
 
-}
+                </select>
 
+            </div>
 
-/* ABOUT */
 
-.about-grid {
+            <div class="form-field">
 
-    grid-template-columns:
-        1fr;
+                <label for="mensaje">
+                    Mensaje
+                </label>
 
-    gap:
-        35px;
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Cuéntanos brevemente sobre tu necesidad..."
+                    required></textarea>
 
-}
+            </div>
 
 
-/* CONTACT */
+            <button type="submit" class="button button-primary form-button">
+                Enviar consulta
+                <span>→</span>
+            </button>
 
-.contact-grid {
+        </form>
 
-    grid-template-columns:
-        1fr;
+    </div>
 
-    gap:
-        45px;
+</section>
 
-}
+</main>
 
-.contact-form {
 
-    padding:
-        25px 20px;
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
-}
+<footer class="site-footer">
 
-.form-row {
+    <div class="container footer-top">
 
-    grid-template-columns:
-        1fr;
+        <div class="footer-brand">
 
-}
+            <img
+                src="images/logo-amberes.png"
+                alt="Amberes">
 
+            <p>
+                Consultoría financiera<br>
+                & empresarial.
+            </p>
 
-/* FOOTER */
+        </div>
 
-.footer-container {
 
-    grid-template-columns:
-        1fr;
+        <div class="footer-links">
 
-    gap:
-        30px;
+            <div>
 
-    padding:
-        0 22px 35px;
+                <span>EXPLORAR</span>
 
-}
+                <a href="#servicios">Servicios</a>
+                <a href="#metodologia">Metodología</a>
+                <a href="#pymes">PYMES</a>
+                <a href="#nosotros">Nosotros</a>
 
-.footer-bottom {
+            </div>
 
-    flex-direction:
-        column;
 
-    padding:
-        18px 22px 0;
+            <div>
 
-}
-```
+                <span>CONTACTO</span>
 
-}
+                <a href="mailto:consultoraamberes@gmail.com">
+                    Email
+                </a>
 
-/* =========================================================
-SMALL MOBILE
-========================================================= */
+                <a href="tel:+56953649876">
+                    Teléfono
+                </a>
 
-@media (max-width: 480px) {
+            </div>
 
-```
-.hero-content {
 
-    padding:
-        65px 20px;
+            <div>
 
-}
+                <span>REDES</span>
 
-.hero h1 {
+                <a
+                    href="https://www.linkedin.com/in/amberes-consulting-992a303ab/"
+                    target="_blank"
+                    rel="noopener">
+                    LinkedIn
+                </a>
 
-    font-size:
-        37px;
+                <a
+                    href="https://www.instagram.com/amberes_rrhh"
+                    target="_blank"
+                    rel="noopener">
+                    Instagram
+                </a>
 
-}
+            </div>
 
-h2 {
+        </div>
 
-    font-size:
-        34px;
+    </div>
 
-}
 
-.hero-buttons {
+    <div class="container footer-bottom">
 
-    flex-direction:
-        column;
+        <span>
+            © 2026 Amberes Consultora. Todos los derechos reservados.
+        </span>
 
-}
+        <span>
+            Santiago · Chile
+        </span>
 
-.hero-buttons .btn {
+    </div>
 
-    width:
-        100%;
+</footer>
 
-}
 
-.method-grid {
+<script>
 
-    grid-template-columns:
-        1fr;
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
 
-}
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
-.method-step,
-.method-step:nth-child(3),
-.method-step:nth-child(4) {
+    if (menuToggle && mainNav) {
 
-    border-left:
-        none;
+        menuToggle.addEventListener("click", () => {
 
-    border-top:
-        1px solid
-        var(--border);
+            const isOpen =
+                mainNav.classList.toggle("is-open");
 
-}
+            menuToggle.classList.toggle("is-open");
 
-.method-step:first-child {
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
 
-    border-top:
-        none;
+        });
 
-}
 
-.project-metrics {
+        document.querySelectorAll(".main-nav a")
+            .forEach(link => {
 
-    grid-template-columns:
-        1fr;
+                link.addEventListener("click", () => {
 
-}
-```
+                    mainNav.classList.remove("is-open");
+                    menuToggle.classList.remove("is-open");
 
-}
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
-/* =========================================================
-ACCESSIBILITY
-========================================================= */
+                });
 
-:focus-visible {
+            });
 
-```
-outline:
-    3px solid
-    rgba(197,160,89,.55);
-
-outline-offset:
-    3px;
-```
+    }
 
-}
 
-/* =========================================================
-REDUCED MOTION
-========================================================= */
+    /* =====================================================
+       HEADER SCROLL
+    ===================================================== */
 
-@media (prefers-reduced-motion: reduce) {
+    const header =
+        document.querySelector(".site-header");
 
-```
-html {
-    scroll-behavior:
-        auto;
-}
+    window.addEventListener("scroll", () => {
 
-*,
-*::before,
-*::after {
+        if (window.scrollY > 30) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
 
-    transition:
-        none !important;
+    });
 
-    animation:
-        none !important;
+</script>
 
-}
+</body>
+</html>
 ```
-
-}
-
