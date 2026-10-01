@@ -1,1026 +1,512 @@
+```html
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>Amberes Consultora | Finanzas, Gestión, Personas y PYMES</title>
+    <title>Amberes | Consultoría Financiera y Empresarial</title>
 
-<meta name="description" content="Amberes Consultora asesora a empresas, PYMES, emprendedores y profesionales en finanzas, control de gestión, evaluación de proyectos, tributación, patentes comerciales y talento senior.">
-<meta name="keywords" content="consultora financiera Chile, asesoría financiera PYMES, control de gestión, evaluación de proyectos, asesoría tributaria, patente comercial, recursos humanos, talento senior, Santiago">
-<meta name="author" content="Amberes Consultora">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Amberes | Consultoría financiera, evaluación de proyectos, control de gestión, asesoría tributaria, patentes comerciales, talento y soluciones para PYMES.">
 
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#102A43">
+    <meta name="author" content="Amberes Consultora">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Amberes Consultora | Finanzas, Gestión, Personas y PYMES">
-<meta property="og:description" content="Transformamos información en decisiones y proyectos en resultados.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ezracovenia.github.io/consultora-amberes/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
-```
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- =========================================================
-     INDICADORES ECONÓMICOS
+     HEADER
 ========================================================= -->
 
-<div class="indicators">
-    <div class="indicators-container">
+<header class="site-header">
 
-```
-    <span>
-        UF
-        <strong id="uf">–</strong>
-    </span>
+    <div class="header-inner">
 
-    <span>
-        USD
-        <strong id="usd">–</strong>
-    </span>
-
-    <span>
-        EUR
-        <strong id="eur">–</strong>
-    </span>
-
-    <span>
-        IPC
-        <strong id="ipc">–</strong>
-    </span>
-
-    <span>
-        UTM
-        <strong id="utm">–</strong>
-    </span>
-
-    <span>
-        UTA
-        <strong id="uta">–</strong>
-    </span>
-
-</div>
-```
-
-</div>
-
-<!-- =========================================================
-     NAVBAR
-========================================================= -->
-
-<header class="navbar">
-
-```
-<div class="nav-container">
-
-    <a href="#inicio" class="brand">
-
-        <img
-            src="images/logo-amberes.png"
-            alt="Amberes Consultora"
-            class="logo"
-        >
-
-    </a>
-
-    <button
-        class="menu-toggle"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-    >
-        ☰
-    </button>
-
-    <nav class="main-nav">
-
-        <a href="#servicios">Servicios</a>
-
-        <a href="#pymes">PYMES</a>
-
-        <a href="#metodologia">Cómo trabajamos</a>
-
-        <a href="#nosotros">Nosotros</a>
-
-        <a href="#contacto" class="nav-cta">
-            Hablemos
+        <a href="#inicio" class="brand">
+            <img src="images/logo-amberes.png" alt="Amberes Consultora">
         </a>
 
-        <div class="social-icons">
+        <nav class="main-nav" id="mainNav">
 
-            <a
-                href="https://www.instagram.com/amberes_rrhh"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram Amberes"
-            >
-                <img
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-                    alt=""
-                >
-            </a>
+            <a href="#servicios">Servicios</a>
+            <a href="#metodologia">Metodología</a>
+            <a href="#pymes">PYMES</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto" class="nav-contact">Contacto</a>
 
-            <a
-                href="https://www.linkedin.com/in/amberes-consulting-992a303ab/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn Amberes"
-            >
-                <img
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-                    alt=""
-                >
-            </a>
+        </nav>
 
-        </div>
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
 
-    </nav>
-
-</div>
-```
+    </div>
 
 </header>
 
-<main id="inicio">
+
+<main>
 
 <!-- =========================================================
      HERO
 ========================================================= -->
 
-<section class="hero">
+<section class="hero" id="inicio">
 
-```
-<div class="hero-content">
+    <div class="hero-inner">
 
-    <div class="hero-text">
+        <div class="hero-copy">
 
-        <span class="eyebrow">
-            AMBERES CONSULTORA
-        </span>
+            <p class="eyebrow">
+                CONSULTORÍA FINANCIERA & EMPRESARIAL
+            </p>
 
-        <h1>
-            Decisiones más claras.
-            <span>Negocios mejor gestionados.</span>
-        </h1>
+            <h1>
+                Decisiones más claras.<br>
+                <em>Negocios mejor gestionados.</em>
+            </h1>
 
-        <p class="hero-description">
+            <p class="hero-description">
+                Transformamos información, proyectos y oportunidades
+                en decisiones con fundamento.
+            </p>
 
-            Consultoría financiera, tributaria y de gestión
-            para empresas, PYMES, emprendedores y profesionales.
+            <div class="hero-actions">
 
-        </p>
+                <a href="#contacto" class="button button-primary">
+                    Conversemos
+                </a>
 
-        <p class="hero-subdescription">
+                <a href="#servicios" class="text-link">
+                    Conocer nuestros servicios
+                    <span>→</span>
+                </a>
 
-            Transformamos información en decisiones y proyectos
-            en resultados.
+            </div>
 
-        </p>
+        </div>
 
-        <div class="hero-buttons">
+        <div class="hero-side">
 
-            <a href="#contacto" class="btn btn-primary">
-                Quiero asesoría
-            </a>
+            <div class="hero-line"></div>
 
-            <a href="#servicios" class="btn btn-secondary">
-                Conocer servicios
-            </a>
+            <p>
+                Finanzas · Gestión · Proyectos · Personas
+            </p>
+
+            <span>
+                SANTIAGO · CHILE
+            </span>
 
         </div>
 
     </div>
-
-
-    <div class="hero-panel">
-
-        <div class="hero-panel-header">
-
-            <span>AMBERES</span>
-
-            <span class="status-dot"></span>
-
-        </div>
-
-        <div class="hero-panel-content">
-
-            <div class="metric">
-
-                <small>FINANZAS</small>
-
-                <strong>
-                    Control & Gestión
-                </strong>
-
-            </div>
-
-            <div class="metric">
-
-                <small>PROYECTOS</small>
-
-                <strong>
-                    Evaluación & Rentabilidad
-                </strong>
-
-            </div>
-
-            <div class="metric">
-
-                <small>PYMES</small>
-
-                <strong>
-                    Gestión Integral
-                </strong>
-
-            </div>
-
-            <div class="metric">
-
-                <small>PERSONAS</small>
-
-                <strong>
-                    Talento & Experiencia
-                </strong>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-```
 
 </section>
+
 
 <!-- =========================================================
-     PROPUESTA DE VALOR
+     INTRO
 ========================================================= -->
 
-<section class="value-section">
+<section class="intro-section">
 
-```
-<div class="section-container">
+    <div class="container intro-grid">
 
-    <span class="eyebrow">
-        NUESTRA PROPUESTA
-    </span>
+        <div>
+            <p class="section-number">01 / AMBERES</p>
+        </div>
 
-    <h2>
-        Tu negocio no necesita más información.
-        <span>Necesita mejores decisiones.</span>
-    </h2>
+        <div class="intro-content">
 
-    <p class="section-intro">
+            <h2>
+                Información que se convierte
+                <span>en decisiones.</span>
+            </h2>
 
-        En Amberes combinamos experiencia financiera,
-        gestión empresarial y conocimiento de personas para
-        transformar problemas complejos en soluciones concretas,
-        comprensibles y accionables.
+            <p>
+                Las empresas no necesitan más información.
+                Necesitan entenderla, interpretarla y utilizarla
+                para tomar mejores decisiones.
+            </p>
 
-    </p>
+            <p>
+                En Amberes combinamos análisis financiero,
+                visión empresarial y herramientas de gestión
+                para acompañar decisiones relevantes.
+            </p>
 
-</div>
-```
+        </div>
+
+    </div>
 
 </section>
+
 
 <!-- =========================================================
      SERVICIOS
 ========================================================= -->
 
-<section id="servicios" class="services-section">
+<section class="services-section" id="servicios">
 
-```
-<div class="section-container">
+    <div class="container">
 
-    <div class="section-heading">
+        <div class="section-heading">
 
-        <div>
+            <div>
+                <p class="section-number">02 / ESPECIALIDADES</p>
 
-            <span class="eyebrow">
-                NUESTROS SERVICIOS
-            </span>
+                <h2>
+                    Áreas de<br>
+                    <em>especialización</em>
+                </h2>
+            </div>
 
-            <h2>
-                Soluciones para cada etapa
-                de tu negocio.
-            </h2>
+            <p class="section-intro">
+                Servicios diseñados para empresas, proyectos
+                y profesionales que necesitan mayor claridad
+                para gestionar.
+            </p>
 
         </div>
 
-        <p>
-            Desde ordenar las finanzas hasta evaluar una inversión,
-            formalizar un negocio o encontrar el talento adecuado.
+
+        <div class="services-list">
+
+            <article class="service-item">
+
+                <span class="service-number">01</span>
+
+                <div class="service-main">
+
+                    <h3>Finanzas & Control de Gestión</h3>
+
+                    <p>
+                        Planificación financiera, presupuesto,
+                        forecast, análisis de resultados,
+                        rentabilidad, flujo de caja y KPIs.
+                    </p>
+
+                    <span class="service-tags">
+                        FP&A · Budget · Forecast · KPIs · P&L
+                    </span>
+
+                </div>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service-item">
+
+                <span class="service-number">02</span>
+
+                <div class="service-main">
+
+                    <h3>Evaluación de Proyectos</h3>
+
+                    <p>
+                        Modelación financiera y análisis de
+                        escenarios para evaluar inversiones,
+                        proyectos y nuevas oportunidades.
+                    </p>
+
+                    <span class="service-tags">
+                        VAN · TIR · Flujos · Escenarios · Sensibilidad
+                    </span>
+
+                </div>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service-item">
+
+                <span class="service-number">03</span>
+
+                <div class="service-main">
+
+                    <h3>Asesoría Tributaria</h3>
+
+                    <p>
+                        Apoyo en planificación, análisis y
+                        coordinación de materias tributarias
+                        para empresas y proyectos.
+                    </p>
+
+                    <span class="service-tags">
+                        Planificación · Cumplimiento · Coordinación
+                    </span>
+
+                </div>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service-item">
+
+                <span class="service-number">04</span>
+
+                <div class="service-main">
+
+                    <h3>Patentes Comerciales</h3>
+
+                    <p>
+                        Apoyo y acompañamiento en procesos
+                        relacionados con patentes comerciales
+                        municipales.
+                    </p>
+
+                    <span class="service-tags">
+                        Gestión · Documentación · Coordinación
+                    </span>
+
+                </div>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service-item">
+
+                <span class="service-number">05</span>
+
+                <div class="service-main">
+
+                    <h3>Personas & Talento Senior</h3>
+
+                    <p>
+                        Soluciones orientadas a la gestión de
+                        personas, experiencia profesional y
+                        talento +50.
+                    </p>
+
+                    <span class="service-tags">
+                        Personas · Experiencia · Talento +50
+                    </span>
+
+                </div>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service-item">
+
+                <span class="service-number">06</span>
+
+                <div class="service-main">
+
+                    <h3>Soluciones para PYMES</h3>
+
+                    <p>
+                        Una estructura de gestión financiera y
+                        empresarial adaptada a las necesidades
+                        de pequeñas y medianas empresas.
+                    </p>
+
+                    <span class="service-tags">
+                        Gestión · Control · Finanzas · Información
+                    </span>
+
+                </div>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FRASE CENTRAL
+========================================================= -->
+
+<section class="statement-section">
+
+    <div class="container">
+
+        <p class="section-number">03 / NUESTRA MIRADA</p>
+
+        <h2>
+            No se trata solamente<br>
+            de <em>controlar.</em>
+        </h2>
+
+        <p class="statement-large">
+            Se trata de comprender qué está ocurriendo,
+            por qué está ocurriendo y qué decisión
+            tomar a continuación.
         </p>
 
     </div>
 
-
-    <div class="services-grid">
-
-
-        <!-- FINANZAS -->
-
-        <article class="service-card featured">
-
-            <div class="service-number">
-                01
-            </div>
-
-            <div class="service-icon">
-                ₱
-            </div>
-
-            <h3>
-                Finanzas & Control de Gestión
-            </h3>
-
-            <p>
-                Convertimos los datos financieros de tu empresa
-                en información útil para tomar decisiones.
-            </p>
-
-            <ul>
-
-                <li>Presupuesto y Forecast</li>
-
-                <li>Flujo de caja</li>
-
-                <li>EERR y análisis financiero</li>
-
-                <li>Control de costos y márgenes</li>
-
-                <li>KPIs y dashboards</li>
-
-                <li>Reporting para gerencia</li>
-
-                <li>CFO / Controller externo</li>
-
-            </ul>
-
-            <a href="#contacto" class="service-link">
-                Consultar servicio →
-            </a>
-
-        </article>
-
-
-        <!-- PROYECTOS -->
-
-        <article class="service-card">
-
-            <div class="service-number">
-                02
-            </div>
-
-            <div class="service-icon">
-                ◇
-            </div>
-
-            <h3>
-                Evaluación de Proyectos
-            </h3>
-
-            <p>
-                Antes de invertir, conoce cuánto necesitas,
-                cuánto puedes ganar y qué riesgos estás asumiendo.
-            </p>
-
-            <ul>
-
-                <li>Flujos de caja proyectados</li>
-
-                <li>VAN y TIR</li>
-
-                <li>Payback</li>
-
-                <li>Punto de equilibrio</li>
-
-                <li>Escenarios y sensibilidades</li>
-
-                <li>Business Case</li>
-
-                <li>Evaluación de inversiones</li>
-
-            </ul>
-
-            <a href="#contacto" class="service-link">
-                Evaluar un proyecto →
-            </a>
-
-        </article>
-
-
-        <!-- TRIBUTARIO -->
-
-        <article class="service-card">
-
-            <div class="service-number">
-                03
-            </div>
-
-            <div class="service-icon">
-                %
-            </div>
-
-            <h3>
-                Asesoría Tributaria
-            </h3>
-
-            <p>
-                Apoyo para mantener ordenada la información
-                tributaria y facilitar el cumplimiento de las
-                obligaciones de tu empresa.
-            </p>
-
-            <ul>
-
-                <li>Inicio y modificación de actividades</li>
-
-                <li>IVA y F29</li>
-
-                <li>F22 y declaraciones juradas</li>
-
-                <li>Revisión de situación tributaria</li>
-
-                <li>Ordenamiento documental</li>
-
-                <li>Planificación y coordinación tributaria</li>
-
-            </ul>
-
-            <a href="#contacto" class="service-link">
-                Solicitar asesoría →
-            </a>
-
-        </article>
-
-
-        <!-- PATENTES -->
-
-        <article class="service-card">
-
-            <div class="service-number">
-                04
-            </div>
-
-            <div class="service-icon">
-                ✓
-            </div>
-
-            <h3>
-                Patentes Comerciales
-            </h3>
-
-            <p>
-                Te acompañamos en el proceso de obtención
-                o regularización de tu patente comercial municipal.
-            </p>
-
-            <ul>
-
-                <li>Revisión inicial</li>
-
-                <li>Revisión de antecedentes</li>
-
-                <li>Preparación documental</li>
-
-                <li>Gestión ante municipalidad</li>
-
-                <li>Seguimiento del proceso</li>
-
-                <li>Apoyo en regularización</li>
-
-            </ul>
-
-            <a href="#contacto" class="service-link">
-                Consultar patente →
-            </a>
-
-        </article>
-
-
-        <!-- PERSONAS -->
-
-        <article class="service-card">
-
-            <div class="service-number">
-                05
-            </div>
-
-            <div class="service-icon">
-                +
-            </div>
-
-            <h3>
-                Personas & Talento
-            </h3>
-
-            <p>
-                Conectamos experiencia, capacidades y oportunidades
-                para personas y empresas.
-            </p>
-
-            <ul>
-
-                <li>Reclutamiento y selección</li>
-
-                <li>Perfiles y descripción de cargos</li>
-
-                <li>Evaluación de candidatos</li>
-
-                <li>Orientación laboral</li>
-
-                <li>CV y LinkedIn</li>
-
-                <li>Talento Senior +50</li>
-
-                <li>Bandas salariales</li>
-
-            </ul>
-
-            <a href="#contacto" class="service-link">
-                Consultar servicio →
-            </a>
-
-        </article>
-
-
-        <!-- PYMES -->
-
-        <article class="service-card">
-
-            <div class="service-number">
-                06
-            </div>
-
-            <div class="service-icon">
-                ◎
-            </div>
-
-            <h3>
-                Soluciones para PYMES
-            </h3>
-
-            <p>
-                Capacidades de gestión profesional sin necesidad
-                de contratar un equipo completo.
-            </p>
-
-            <ul>
-
-                <li>Diagnóstico financiero</li>
-
-                <li>Control de gestión</li>
-
-                <li>Finanzas y flujo de caja</li>
-
-                <li>Tributación</li>
-
-                <li>Patentes comerciales</li>
-
-                <li>RRHH</li>
-
-                <li>KPIs y seguimiento</li>
-
-            </ul>
-
-            <a href="#pymes" class="service-link">
-                Conocer solución PYME →
-            </a>
-
-        </article>
-
-    </div>
-
-</div>
-```
-
 </section>
+
 
 <!-- =========================================================
      PYMES
 ========================================================= -->
 
-<section id="pymes" class="pymes-section">
+<section class="pymes-section" id="pymes">
 
-```
-<div class="section-container">
+    <div class="container pymes-grid">
 
-    <div class="pymes-content">
+        <div class="pymes-label">
+            <p class="section-number">04 / PYMES</p>
+        </div>
 
-        <div class="pymes-text">
+        <div class="pymes-content">
 
-            <span class="eyebrow">
-                SOLUCIONES PARA PYMES
-            </span>
+            <p class="eyebrow">
+                GESTIÓN SIN SOBRECARGAR LA ESTRUCTURA
+            </p>
 
             <h2>
-                Tu área de gestión,
-                <span>sin contratar un equipo completo.</span>
+                Tu empresa no siempre
+                necesita un equipo más grande.
+                <em>Necesita mejor información.</em>
             </h2>
 
             <p>
-
-                Muchas PYMES necesitan capacidades financieras,
-                tributarias y de gestión, pero no necesariamente
-                una estructura completa de especialistas.
-
+                Muchas PYMES crecen antes de contar con una
+                estructura de gestión financiera acorde a ese
+                crecimiento.
             </p>
 
             <p>
-
-                Amberes puede acompañarte de manera flexible,
-                según la necesidad y etapa de tu empresa.
-
+                Amberes puede convertirse en ese apoyo externo:
+                información financiera, seguimiento, análisis y
+                herramientas para tomar decisiones con mayor
+                visibilidad.
             </p>
 
-            <a href="#contacto" class="btn btn-primary">
-                Solicitar diagnóstico
+            <a href="#contacto" class="button button-dark">
+                Hablemos de tu empresa
             </a>
 
         </div>
 
-
-        <div class="pymes-solutions">
-
-            <div class="pyme-item">
-
-                <span>01</span>
-
-                <div>
-
-                    <h3>
-                        Orden financiero
-                    </h3>
-
-                    <p>
-                        Flujo de caja, costos, márgenes,
-                        presupuesto y resultados.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="pyme-item">
-
-                <span>02</span>
-
-                <div>
-
-                    <h3>
-                        Información para decidir
-                    </h3>
-
-                    <p>
-                        KPIs, dashboards y reportes
-                        para gerencia.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="pyme-item">
-
-                <span>03</span>
-
-                <div>
-
-                    <h3>
-                        Cumplimiento y formalización
-                    </h3>
-
-                    <p>
-                        Apoyo tributario y gestión
-                        de patentes comerciales.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="pyme-item">
-
-                <span>04</span>
-
-                <div>
-
-                    <h3>
-                        Personas
-                    </h3>
-
-                    <p>
-                        Selección, perfiles y apoyo
-                        en gestión de personas.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
     </div>
-
-</div>
-```
 
 </section>
 
-<!-- =========================================================
-     EVALUACIÓN DE PROYECTOS DESTACADA
-========================================================= -->
-
-<section class="project-section">
-
-```
-<div class="section-container">
-
-    <div class="project-box">
-
-        <div class="project-copy">
-
-            <span class="eyebrow">
-                ANTES DE INVERTIR
-            </span>
-
-            <h2>
-                Convierte una idea
-                en un proyecto evaluado.
-            </h2>
-
-            <p>
-
-                Construimos modelos financieros que permiten
-                entender la inversión requerida, los ingresos,
-                costos, rentabilidad, flujo de caja y sensibilidad
-                del proyecto frente a distintos escenarios.
-
-            </p>
-
-            <a href="#contacto" class="btn btn-light">
-                Evaluar mi proyecto
-            </a>
-
-        </div>
-
-
-        <div class="project-metrics">
-
-            <div>
-                <small>INVERSIÓN</small>
-                <strong>CAPEX</strong>
-            </div>
-
-            <div>
-                <small>RENTABILIDAD</small>
-                <strong>VAN / TIR</strong>
-            </div>
-
-            <div>
-                <small>RIESGO</small>
-                <strong>ESCENARIOS</strong>
-            </div>
-
-            <div>
-                <small>RETORNO</small>
-                <strong>PAYBACK</strong>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-```
-
-</section>
-
-<!-- =========================================================
-     PERSONAS / TALENTO SENIOR
-========================================================= -->
-
-<section class="talent-section">
-
-```
-<div class="section-container">
-
-    <div class="section-heading">
-
-        <div>
-
-            <span class="eyebrow">
-                PERSONAS & TALENTO
-            </span>
-
-            <h2>
-                Experiencia que
-                <span>sigue generando valor.</span>
-            </h2>
-
-        </div>
-
-        <p>
-            Acompañamos a profesionales y empresas en procesos
-            de transición, selección y gestión de talento,
-            con especial foco en adultos y adultos mayores.
-        </p>
-
-    </div>
-
-
-    <div class="talent-grid">
-
-        <article>
-
-            <span class="talent-number">
-                01
-            </span>
-
-            <h3>
-                Para profesionales
-            </h3>
-
-            <p>
-                Orientación laboral, CV, LinkedIn, preparación
-                para entrevistas y estrategia de búsqueda.
-            </p>
-
-            <a href="#contacto">
-                Quiero orientación →
-            </a>
-
-        </article>
-
-
-        <article>
-
-            <span class="talent-number">
-                02
-            </span>
-
-            <h3>
-                Para empresas
-            </h3>
-
-            <p>
-                Reclutamiento, selección, evaluación de perfiles
-                y búsqueda de profesionales con experiencia.
-            </p>
-
-            <a href="#contacto">
-                Buscar talento →
-            </a>
-
-        </article>
-
-
-        <article>
-
-            <span class="talent-number">
-                03
-            </span>
-
-            <h3>
-                Para PYMES
-            </h3>
-
-            <p>
-                Apoyo en perfiles, estructuras, bandas salariales
-                y gestión de personas.
-            </p>
-
-            <a href="#contacto">
-                Consultar →
-            </a>
-
-        </article>
-
-    </div>
-
-</div>
-```
-
-</section>
 
 <!-- =========================================================
      METODOLOGÍA
 ========================================================= -->
 
-<section id="metodologia" class="method-section">
+<section class="method-section" id="metodologia">
 
-```
-<div class="section-container">
+    <div class="container">
 
-    <div class="method-header">
+        <div class="section-heading method-heading">
 
-        <span class="eyebrow">
-            CÓMO TRABAJAMOS
-        </span>
+            <div>
+                <p class="section-number">05 / METODOLOGÍA</p>
 
-        <h2>
-            Del problema
-            <span>a la acción.</span>
-        </h2>
+                <h2>
+                    Una forma simple<br>
+                    de <em>trabajar.</em>
+                </h2>
+            </div>
 
-        <p>
-            Un proceso simple, transparente y orientado
-            a resultados concretos.
-        </p>
-
-    </div>
-
-
-    <div class="method-grid">
-
-        <div class="method-step">
-
-            <span>01</span>
-
-            <h3>
-                Entendemos
-            </h3>
-
-            <p>
-                Conocemos tu empresa, proyecto,
-                situación o necesidad.
+            <p class="section-intro">
+                Cada situación es diferente. Nuestro enfoque
+                comienza entendiendo el problema antes de
+                proponer una solución.
             </p>
 
         </div>
 
 
-        <div class="method-step">
+        <div class="method-grid">
 
-            <span>02</span>
+            <div class="method-step">
 
-            <h3>
-                Analizamos
-            </h3>
+                <span>01</span>
 
-            <p>
-                Ordenamos la información y detectamos
-                oportunidades y riesgos.
-            </p>
+                <h3>Entendemos</h3>
 
-        </div>
+                <p>
+                    Conocemos el contexto, los objetivos y
+                    las variables que realmente importan.
+                </p>
 
-
-        <div class="method-step">
-
-            <span>03</span>
-
-            <h3>
-                Proponemos
-            </h3>
-
-            <p>
-                Entregamos alternativas concretas,
-                comprensibles y accionables.
-            </p>
-
-        </div>
+            </div>
 
 
-        <div class="method-step">
+            <div class="method-step">
 
-            <span>04</span>
+                <span>02</span>
 
-            <h3>
-                Acompañamos
-            </h3>
+                <h3>Analizamos</h3>
 
-            <p>
-                Te ayudamos a implementar y hacer
-                seguimiento de las decisiones.
-            </p>
+                <p>
+                    Ordenamos información, identificamos
+                    variables y construimos escenarios.
+                </p>
+
+            </div>
+
+
+            <div class="method-step">
+
+                <span>03</span>
+
+                <h3>Proponemos</h3>
+
+                <p>
+                    Convertimos el análisis en alternativas
+                    concretas para decidir.
+                </p>
+
+            </div>
+
+
+            <div class="method-step">
+
+                <span>04</span>
+
+                <h3>Acompañamos</h3>
+
+                <p>
+                    Seguimos la implementación y ayudamos
+                    a transformar las decisiones en gestión.
+                </p>
+
+            </div>
 
         </div>
 
     </div>
-
-</div>
-```
 
 </section>
+
 
 <!-- =========================================================
      AMBERES INTELLIGENCE
@@ -1028,40 +514,32 @@
 
 <section class="intelligence-section">
 
-```
-<div class="section-container">
+    <div class="container intelligence-inner">
 
-    <div class="intelligence-box">
+        <div class="intelligence-copy">
 
-        <div class="intelligence-content">
+            <p class="section-number">
+                06 / TECNOLOGÍA
+            </p>
 
-            <span class="eyebrow">
+            <p class="eyebrow">
                 PRÓXIMAMENTE
-            </span>
+            </p>
 
             <h2>
-                Amberes
-                <span>Intelligence™</span>
+                Amberes<br>
+                <em>Intelligence™</em>
             </h2>
 
             <p>
-
-                Tecnología para transformar información financiera
-                y empresarial en indicadores, análisis y decisiones.
-
-            </p>
-
-            <p class="intelligence-note">
-
                 Una nueva generación de herramientas para
-                planificación financiera, control de gestión
-                y evaluación de proyectos.
-
+                transformar información financiera y operacional
+                en gestión.
             </p>
 
-            <a href="#contacto" class="btn btn-primary">
-                Quiero conocerlo
-            </a>
+            <span class="coming-soon">
+                FINANCE · CONTROL · INSIGHTS
+            </span>
 
         </div>
 
@@ -1071,35 +549,43 @@
             <div class="dashboard-card">
 
                 <div class="dashboard-top">
+                    <span>AMBERES INTELLIGENCE</span>
+                    <span>01 / 04</span>
+                </div>
 
-                    <span>
-                        FINANCIAL CONTROL
-                    </span>
+                <div class="dashboard-title">
+                    Gestión financiera
+                </div>
 
-                    <span>
-                        ● LIVE
-                    </span>
+                <div class="dashboard-chart">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
                 </div>
 
-                <div class="dashboard-value">
+                <div class="dashboard-footer">
 
-                    <small>EBITDA</small>
+                    <div>
+                        <small>EBITDA</small>
+                        <strong>+12,4%</strong>
+                    </div>
 
-                    <strong>
-                        +18.4%
-                    </strong>
+                    <div>
+                        <small>CASH FLOW</small>
+                        <strong>+8,7%</strong>
+                    </div>
 
-                </div>
-
-                <div class="dashboard-bars">
-
-                    <span style="height: 40%"></span>
-                    <span style="height: 55%"></span>
-                    <span style="height: 48%"></span>
-                    <span style="height: 70%"></span>
-                    <span style="height: 62%"></span>
-                    <span style="height: 82%"></span>
+                    <div>
+                        <small>MARGEN</small>
+                        <strong>24,1%</strong>
+                    </div>
 
                 </div>
 
@@ -1109,123 +595,83 @@
 
     </div>
 
-</div>
-```
-
 </section>
+
 
 <!-- =========================================================
      NOSOTROS
 ========================================================= -->
 
-<section id="nosotros" class="about-section">
+<section class="about-section" id="nosotros">
 
-```
-<div class="section-container">
-
-    <div class="about-grid">
+    <div class="container about-grid">
 
         <div>
-
-            <span class="eyebrow">
-                AMBERES CONSULTORA
-            </span>
-
-            <h2>
-                Experiencia financiera
-                aplicada al negocio.
-            </h2>
-
+            <p class="section-number">07 / AMBERES</p>
         </div>
 
+        <div class="about-content">
 
-        <div>
+            <h2>
+                Consultoría con una
+                mirada <em>empresarial.</em>
+            </h2>
 
             <p>
-
-                Amberes nace con una idea simple:
-                las empresas necesitan información clara,
-                análisis riguroso y acompañamiento para tomar
-                mejores decisiones.
-
+                Amberes nace con una idea sencilla:
+                entregar herramientas y análisis que permitan
+                tomar decisiones empresariales con mayor
+                claridad.
             </p>
 
             <p>
-
-                Nuestra experiencia combina finanzas,
-                control de gestión, planificación financiera,
-                evaluación de proyectos, gestión empresarial
-                y personas.
-
+                Trabajamos desde una perspectiva práctica,
+                combinando finanzas, gestión y análisis para
+                abordar problemas concretos.
             </p>
 
-            <p>
-
-                Trabajamos con una mirada práctica:
-                entender el problema, cuantificarlo,
-                encontrar alternativas y convertirlas
-                en acciones.
-
-            </p>
+            <div class="about-signature">
+                <span>AMBERES</span>
+                <small>CONSULTORÍA FINANCIERA & EMPRESARIAL</small>
+            </div>
 
         </div>
 
     </div>
 
-</div>
-```
-
 </section>
+
 
 <!-- =========================================================
      CONTACTO
 ========================================================= -->
 
-<section id="contacto" class="contact-section">
+<section class="contact-section" id="contacto">
 
-```
-<div class="section-container">
+    <div class="container contact-grid">
 
-    <div class="contact-grid">
+        <div class="contact-intro">
 
-
-        <div class="contact-copy">
-
-            <span class="eyebrow">
-                HABLEMOS
-            </span>
+            <p class="section-number">08 / CONTACTO</p>
 
             <h2>
-                Cuéntanos qué
-                necesitas resolver.
+                Hablemos de<br>
+                <em>tu próximo desafío.</em>
             </h2>
 
             <p>
-
-                Completa el formulario y nos pondremos
-                en contacto contigo para entender tu necesidad
-                y revisar cómo podemos ayudarte.
-
+                Cuéntanos brevemente qué necesitas.
+                Revisaremos tu situación y te contactaremos.
             </p>
-
 
             <div class="contact-details">
 
                 <a href="mailto:consultoraamberes@gmail.com">
-
-                    <span>EMAIL</span>
-
                     consultoraamberes@gmail.com
-
                 </a>
 
-
                 <a href="tel:+56953649876">
-
-                    <span>TELÉFONO</span>
-
                     +56 9 5364 9876
-
                 </a>
 
             </div>
@@ -1234,281 +680,288 @@
 
 
         <form
-            action="https://formspree.io/f/mreabzdn"
-            method="POST"
             class="contact-form"
-        >
+            action="https://formspree.io/f/mreabzdn"
+            method="POST">
 
-            <div class="form-row">
+            <div class="form-field">
+
+                <label for="nombre">
+                    Nombre
+                </label>
 
                 <input
                     type="text"
+                    id="nombre"
                     name="nombre"
-                    placeholder="Nombre completo"
-                    required
-                >
-
-                <input
-                    type="tel"
-                    name="telefono"
-                    placeholder="Teléfono"
-                    required
-                >
+                    placeholder="Tu nombre"
+                    required>
 
             </div>
 
 
-            <input
-                type="email"
-                name="email"
-                placeholder="Correo electrónico"
-                required
-            >
+            <div class="form-field">
+
+                <label for="email">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="tu@email.com"
+                    required>
+
+            </div>
 
 
-            <select
-                name="servicio"
-                required
-            >
+            <div class="form-field">
 
-                <option value="">
+                <label for="empresa">
+                    Empresa
+                </label>
+
+                <input
+                    type="text"
+                    id="empresa"
+                    name="empresa"
+                    placeholder="Nombre de la empresa">
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="servicio">
                     ¿En qué podemos ayudarte?
-                </option>
+                </label>
 
-                <option>
-                    Finanzas y Control de Gestión
-                </option>
+                <select id="servicio" name="servicio">
 
-                <option>
-                    Evaluación de Proyectos
-                </option>
+                    <option value="">
+                        Selecciona una opción
+                    </option>
 
-                <option>
-                    Asesoría Tributaria
-                </option>
+                    <option value="finanzas">
+                        Finanzas & Control de Gestión
+                    </option>
 
-                <option>
-                    Patente Comercial
-                </option>
+                    <option value="proyectos">
+                        Evaluación de Proyectos
+                    </option>
 
-                <option>
-                    Soluciones para PYMES
-                </option>
+                    <option value="tributario">
+                        Asesoría Tributaria
+                    </option>
 
-                <option>
-                    Reclutamiento y Selección
-                </option>
+                    <option value="patentes">
+                        Patentes Comerciales
+                    </option>
 
-                <option>
-                    Talento Senior +50
-                </option>
+                    <option value="personas">
+                        Personas & Talento
+                    </option>
 
-                <option>
-                    Orientación laboral
-                </option>
+                    <option value="pymes">
+                        Soluciones para PYMES
+                    </option>
 
-                <option>
-                    Amberes Intelligence™
-                </option>
+                    <option value="otro">
+                        Otro
+                    </option>
 
-                <option>
-                    Otro
-                </option>
+                </select>
 
-            </select>
+            </div>
 
 
-            <textarea
-                name="mensaje"
-                placeholder="Cuéntanos brevemente qué necesitas..."
-                rows="6"
-                required
-            ></textarea>
+            <div class="form-field">
+
+                <label for="mensaje">
+                    Mensaje
+                </label>
+
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Cuéntanos brevemente sobre tu necesidad..."
+                    required></textarea>
+
+            </div>
 
 
-            <button
-                type="submit"
-                class="btn btn-primary"
-            >
+            <button type="submit" class="button button-primary form-button">
                 Enviar consulta
+                <span>→</span>
             </button>
-
-            <small class="form-disclaimer">
-
-                Tus datos serán utilizados exclusivamente
-                para responder a tu solicitud.
-
-            </small>
 
         </form>
 
     </div>
 
-</div>
-```
-
 </section>
 
 </main>
 
-<!-- =========================================================
-     SOCIAL
-========================================================= -->
-
-<div class="social-contact">
-
-```
-<a
-    href="https://www.instagram.com/amberes_rrhh"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram Amberes"
->
-
-    <img
-        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-        alt="Instagram"
-    >
-
-</a>
-
-
-<a
-    href="https://www.linkedin.com/in/amberes-consulting-992a303ab/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn Amberes"
->
-
-    <img
-        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-        alt="LinkedIn"
-    >
-
-</a>
-```
-
-</div>
 
 <!-- =========================================================
      FOOTER
 ========================================================= -->
 
-<footer>
+<footer class="site-footer">
 
-```
-<div class="footer-container">
+    <div class="container footer-top">
 
-    <div class="footer-brand">
+        <div class="footer-brand">
 
-        <img
-            src="images/logo-amberes.png"
-            alt="Amberes Consultora"
-        >
+            <img
+                src="images/logo-amberes.png"
+                alt="Amberes">
 
-        <p>
-            Finanzas · Gestión · Personas
-        </p>
+            <p>
+                Consultoría financiera<br>
+                & empresarial.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <div>
+
+                <span>EXPLORAR</span>
+
+                <a href="#servicios">Servicios</a>
+                <a href="#metodologia">Metodología</a>
+                <a href="#pymes">PYMES</a>
+                <a href="#nosotros">Nosotros</a>
+
+            </div>
+
+
+            <div>
+
+                <span>CONTACTO</span>
+
+                <a href="mailto:consultoraamberes@gmail.com">
+                    Email
+                </a>
+
+                <a href="tel:+56953649876">
+                    Teléfono
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <span>REDES</span>
+
+                <a
+                    href="https://www.linkedin.com/in/amberes-consulting-992a303ab/"
+                    target="_blank"
+                    rel="noopener">
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://www.instagram.com/amberes_rrhh"
+                    target="_blank"
+                    rel="noopener">
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
 
-    <div class="footer-links">
+    <div class="container footer-bottom">
 
-        <a href="#servicios">
-            Servicios
-        </a>
+        <span>
+            © 2026 Amberes Consultora. Todos los derechos reservados.
+        </span>
 
-        <a href="#pymes">
-            PYMES
-        </a>
-
-        <a href="#nosotros">
-            Nosotros
-        </a>
-
-        <a href="#contacto">
-            Contacto
-        </a>
+        <span>
+            Santiago · Chile
+        </span>
 
     </div>
-
-
-    <div class="footer-contact">
-
-        <a href="mailto:consultoraamberes@gmail.com">
-            consultoraamberes@gmail.com
-        </a>
-
-        <a href="tel:+56953649876">
-            +56 9 5364 9876
-        </a>
-
-    </div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-    <span>
-        © 2026 Amberes Consultora. Todos los derechos reservados.
-    </span>
-
-    <span>
-        Finanzas · Gestión · Personas
-    </span>
-
-</div>
-```
 
 </footer>
 
-<!-- =========================================================
-     MOBILE MENU
-========================================================= -->
 
 <script>
 
-const menuToggle = document.querySelector(".menu-toggle");
-const mainNav = document.querySelector(".main-nav");
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
 
-if (menuToggle && mainNav) {
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
-    menuToggle.addEventListener("click", () => {
+    if (menuToggle && mainNav) {
 
-        const isOpen = mainNav.classList.toggle("active");
+        menuToggle.addEventListener("click", () => {
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
+            const isOpen =
+                mainNav.classList.toggle("is-open");
 
-    });
-
-
-    document.querySelectorAll(".main-nav a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            mainNav.classList.remove("active");
+            menuToggle.classList.toggle("is-open");
 
             menuToggle.setAttribute(
                 "aria-expanded",
-                "false"
+                isOpen
             );
 
         });
 
-    });
 
-}
+        document.querySelectorAll(".main-nav a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    mainNav.classList.remove("is-open");
+                    menuToggle.classList.remove("is-open");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
+    }
+
+
+    /* =====================================================
+       HEADER SCROLL
+    ===================================================== */
+
+    const header =
+        document.querySelector(".site-header");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 30) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+
+    });
 
 </script>
 
-<!-- INDICADORES -->
-
-<script src="indicators.js"></script>
-
 </body>
 </html>
+```
