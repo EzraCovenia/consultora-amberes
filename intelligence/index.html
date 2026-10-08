@@ -1,1 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Amberes Intelligence™ · Adaptación técnica desde Amberes Financial Intelligence -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amberes Intelligence™ | Financial Intelligence</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#102a36">
+    <meta name="description" content="Amberes Intelligence™: análisis financiero, evaluación de proyectos, flujo de caja y modelamiento financiero para la gestión empresarial.">
+    <meta name="application-name" content="Amberes Intelligence™">
+    <link rel="stylesheet" href="./intelligence.css">
+</head>
+<body>
 
+<div class="processing-overlay" id="processingOverlay">
+  <div style="text-align:center">
+    <div class="spinner"></div>
+    <div style="font-size:17px;color:#b9c7c9">Analizando archivos...</div>
+  </div>
+</div>
+
+<!-- NAV DE RETORNO AL SITIO CORPORATIVO -->
+<div class="site-nav">
+  <a href="https://ezracovenia.github.io/consultora-amberes/">← Volver a Amberes Consultora</a>
+  <span class="brand-chip">AMBERES INTELLIGENCE™ · FINANCIAL CONTROL</span>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-logo">
+    <img id="logoImg" src="../assets/logo-amberes.png" alt="Amberes Consultora" loading="eager">
+  </div>
+  <div class="header-text">
+    <div class="eyebrow">AMBERES CONSULTORA · FINANCIAL INTELLIGENCE</div>
+    <h1>Amberes Intelligence™</h1>
+    <p>Financial Control · Evaluación de Proyectos · Modelamiento Financiero</p>
+  </div>
+</div>
+
+<!-- UPLOAD COMPACTO -->
+<div class="upload-section">
+  <div class="upload-row">
+    <div class="upload-area" id="dropZone" onclick="document.getElementById('fileInput').click()">
+      <div class="upload-icon">📂</div>
+      <div class="upload-text">
+        <strong>Carga tus archivos Excel</strong>
+        El sistema detecta automáticamente: P&amp;L o Evaluación de Proyectos
+      </div>
+    </div>
+    <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+      ⬆ Seleccionar Archivos
+    </button>
+    <input type="file" id="fileInput" accept=".xlsx,.xls" multiple>
+  </div>
+  <div id="filesLoadedContainer" style="display:none">
+    <div class="files-loaded" id="filesList"></div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="nav-tabs">
+  <button class="tab-btn active" onclick="switchTab('overview',this)">📊 Visión General</button>
+  <button class="tab-btn" onclick="switchTab('pl-analysis',this)">📈 Análisis P&amp;L</button>
+  <button class="tab-btn" onclick="switchTab('cashflow',this)">💰 Flujo de Caja</button>
+  <button class="tab-btn" onclick="switchTab('manda',this)">🤝 M&amp;A / Valoración</button>
+</div>
+
+<!-- ======= TAB 1: VISIÓN GENERAL ======= -->
+<div id="overview" class="dashboard-content active">
+  <div id="overviewEmpty" class="empty-state">
+    <div class="empty-state-icon">📊</div>
+    <div style="font-size:17px;margin-bottom:8px">Carga un archivo de Evaluación de Proyectos</div>
+    <div style="font-size:13px;opacity:.7">Se generarán KPIs, gráficos de sensibilidad y recomendaciones automáticas</div>
+  </div>
+  <div id="overviewContent" style="display:none">
+
+    <!-- KPIs principales -->
+    <div class="metrics-grid" id="kpiGrid"></div>
+
+    <!-- PANEL SENSIBILIDAD -->
+    <div class="sensitivity-panel">
+      <div class="sensitivity-title">🎛️ Análisis de Sensibilidad — Parámetros Ajustables</div>
+      <div class="sensitivity-grid">
+
+        <!-- Slider Inversión -->
+        <div class="sens-control">
+          <div class="sens-label">💰 Inversión Inicial</div>
+          <div class="sens-value-display" id="invDisplay">$50,000,000 <span>base</span></div>
+          <div class="slider-row">
+            <span class="slider-min">$10M</span>
+            <input type="range" id="sliderInv" min="10000000" max="150000000" step="1000000" value="50000000" oninput="updateSensitivity()">
+            <span class="slider-max">$150M</span>
+          </div>
+          <div class="sens-impact neutral" id="invImpact">Ajusta el slider para ver el impacto</div>
+        </div>
+
+        <!-- Slider Impuesto -->
+        <div class="sens-control">
+          <div class="sens-label">🌎 Tasa de Impuesto a la Renta</div>
+          <div class="sens-value-display" id="taxDisplay">27% <span>Chile base</span></div>
+          <div class="slider-row">
+            <span class="slider-min">0%</span>
+            <input type="range" id="sliderTax" min="0" max="50" step="1" value="27" oninput="updateSensitivity()">
+            <span class="slider-max">50%</span>
+          </div>
+          <div class="sens-impact neutral" id="taxImpact">Ajusta el slider para ver el impacto</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts visión general -->
+    <div class="chart-grid">
+      <div class="chart-container">
+        <div class="chart-title">📊 Flujo de Caja — Primeros 24 Meses</div>
+        <canvas id="chartCF"></canvas>
+      </div>
+      <div class="chart-container">
+        <div class="chart-title">📉 EBITDA &amp; EBIT Mensuales</div>
+        <canvas id="chartEbitda"></canvas>
+      </div>
+    </div>
+
+    <div class="insights-section">
+      <div class="insight-title">💡 Insights Estratégicos</div>
+      <div id="insightsOverview"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= TAB 2: P&L ======= -->
+<div id="pl-analysis" class="dashboard-content">
+  <div id="plEmpty" class="empty-state">
+    <div class="empty-state-icon">📈</div>
+    <div style="font-size:17px;margin-bottom:8px">Carga tu archivo P&amp;L (Estado de Resultados)</div>
+    <div style="font-size:13px;opacity:.7">Se generará análisis comparativo Real vs Budget vs Forecast con análisis vertical y horizontal</div>
+  </div>
+  <div id="plContent" style="display:none">
+
+    <!-- Selector tipo empresa -->
+    <div class="selector-row">
+      <span class="selector-label">Tipo de Empresa:</span>
+      <button class="sel-btn" id="btnProductiva" onclick="switchEmpresa('productiva')">🏭 Empresa Productiva</button>
+      <button class="sel-btn active" id="btnServicios" onclick="switchEmpresa('servicios')">🏢 Empresa de Servicios</button>
+    </div>
+
+    <!-- KPIs comparativos -->
+    <div class="metrics-grid" id="plKpiGrid"></div>
+
+    <!-- Tabla comparativa Real vs Budget vs Forecast -->
+    <div class="chart-container">
+      <div class="chart-title">📋 Comparativa Real vs Budget vs Forecast — Año Completo</div>
+      <div style="overflow-x:auto">
+        <table class="compare-table" id="compareTable"></table>
+      </div>
+    </div>
+
+    <!-- Charts análisis -->
+    <div class="chart-grid">
+      <div class="chart-container">
+        <div class="chart-title">📊 Análisis Vertical — Estructura de Ingresos y Costos</div>
+        <canvas id="chartVertical"></canvas>
+      </div>
+      <div class="chart-container">
+        <div class="chart-title">📈 Análisis Horizontal — Evolución Mensual</div>
+        <canvas id="chartHorizontal"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <div class="chart-title">📊 Comparativa de Escenarios — Ingresos, Costo y Utilidad Neta</div>
+      <canvas id="chartScenarios"></canvas>
+    </div>
+
+    <div class="insights-section">
+      <div class="insight-title">🎯 Alertas &amp; Recomendaciones P&amp;L</div>
+      <div id="insightsPL"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= TAB 3: FLUJO DE CAJA ======= -->
+<div id="cashflow" class="dashboard-content">
+  <div id="cfEmpty" class="empty-state">
+    <div class="empty-state-icon">💰</div>
+    <div style="font-size:17px;margin-bottom:8px">Carga un archivo de Evaluación de Proyectos</div>
+    <div style="font-size:13px;opacity:.7">Se generará flujo de caja económico, financiero y waterfall</div>
+  </div>
+  <div id="cfContent" style="display:none">
+    <div class="metrics-grid" id="cfKpiGrid"></div>
+    <div class="chart-grid">
+      <div class="chart-container">
+        <div class="chart-title">💰 Flujo de Caja Económico vs Financiero</div>
+        <canvas id="chartCFComp"></canvas>
+      </div>
+      <div class="chart-container">
+        <div class="chart-title">📊 Waterfall — Origen y Uso de Fondos</div>
+        <canvas id="chartWaterfall"></canvas>
+      </div>
+    </div>
+    <div class="insights-section">
+      <div class="insight-title">⚡ Análisis de Liquidez y Solvencia</div>
+      <div id="insightsCF"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= TAB 4: M&A / MODELAMIENTO FINANCIERO ======= -->
+<div id="manda" class="dashboard-content">
+  <div class="ma-layout">
+
+    <!-- PANEL DE SUPUESTOS -->
+    <div class="ma-panel">
+      <div class="ma-section-title">💵 Supuestos Operacionales</div>
+
+      <div class="ma-field">
+        <label>Ingresos Base (año 0) <b id="dIngBase">$1,000M</b></label>
+        <input type="range" id="maIngBase" min="100000000" max="20000000000" step="50000000" value="1000000000" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Crecimiento Anual Ingresos <b id="dGrowth">8.0%</b></label>
+        <input type="range" id="maGrowth" min="-5" max="35" step="0.5" value="8" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Margen EBITDA <b id="dMargin">22.0%</b></label>
+        <input type="range" id="maMargin" min="2" max="55" step="0.5" value="22" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>D&amp;A (% de ingresos) <b id="dDA">4.0%</b></label>
+        <input type="range" id="maDA" min="0" max="15" step="0.5" value="4" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Capex (% de ingresos) <b id="dCapex">5.0%</b></label>
+        <input type="range" id="maCapex" min="0" max="20" step="0.5" value="5" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Δ Capital de Trabajo (% Δingresos) <b id="dNWC">8.0%</b></label>
+        <input type="range" id="maNWC" min="0" max="25" step="0.5" value="8" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Tasa de Impuesto <b id="dTaxMA">27.0%</b></label>
+        <input type="range" id="maTax" min="0" max="40" step="1" value="27" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Años de Proyección <b id="dYears">5</b></label>
+        <input type="range" id="maYears" min="3" max="10" step="1" value="5" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Crecimiento Terminal (g) <b id="dTermG">2.5%</b></label>
+        <input type="range" id="maTermG" min="0" max="5" step="0.1" value="2.5" oninput="runMA()">
+      </div>
+
+      <div class="ma-section-title">🏦 WACC — Costo de Capital</div>
+      <div class="ma-field">
+        <label>Tasa Libre de Riesgo (Rf) <b id="dRf">5.0%</b></label>
+        <input type="range" id="maRf" min="0" max="10" step="0.1" value="5" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Beta Apalancado (β) <b id="dBeta">1.10</b></label>
+        <input type="range" id="maBeta" min="0.4" max="2.5" step="0.05" value="1.1" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Premio por Riesgo de Mercado (ERP) <b id="dErp">6.5%</b></label>
+        <input type="range" id="maErp" min="2" max="12" step="0.1" value="6.5" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Riesgo País / Tamaño (bps extra) <b id="dCountry">1.5%</b></label>
+        <input type="range" id="maCountry" min="0" max="6" step="0.1" value="1.5" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Costo de Deuda Pre-Tax (Kd) <b id="dKd">7.5%</b></label>
+        <input type="range" id="maKd" min="2" max="18" step="0.1" value="7.5" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Relación Deuda / (Deuda+Equity) <b id="dDE">35%</b></label>
+        <input type="range" id="maDE" min="0" max="80" step="1" value="35" oninput="runMA()">
+      </div>
+
+      <div class="ma-section-title">📐 Múltiplos &amp; Deuda Neta</div>
+      <div class="ma-field">
+        <label>Múltiplo EV/EBITDA Comparables <b id="dMult">7.5x</b></label>
+        <input type="range" id="maMult" min="3" max="18" step="0.1" value="7.5" oninput="runMA()">
+      </div>
+      <div class="ma-field">
+        <label>Deuda Financiera Neta Actual <b id="dNetDebt">$200M</b></label>
+        <input type="range" id="maNetDebt" min="0" max="5000000000" step="25000000" value="200000000" oninput="runMA()">
+      </div>
+
+      <div class="ma-note">Modelo indicativo tipo DCF a perpetuidad (método Gordon) + comparables de mercado. No reemplaza una valoración profesional ni debida diligencia formal.</div>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div>
+      <div class="ma-results-grid">
+        <div class="ma-result-card blue">
+          <div class="ma-result-label">Enterprise Value — DCF</div>
+          <div class="ma-result-value" id="maEV">$0</div>
+          <div class="ma-result-sub" id="maEVsub">—</div>
+        </div>
+        <div class="ma-result-card">
+          <div class="ma-result-label">Equity Value — DCF</div>
+          <div class="ma-result-value" id="maEquity">$0</div>
+          <div class="ma-result-sub">EV menos deuda financiera neta</div>
+        </div>
+        <div class="ma-result-card green">
+          <div class="ma-result-label">WACC</div>
+          <div class="ma-result-value" id="maWACC">0.0%</div>
+          <div class="ma-result-sub" id="maWACCsub">—</div>
+        </div>
+        <div class="ma-result-card amber">
+          <div class="ma-result-label">EV — Múltiplos Comparables</div>
+          <div class="ma-result-value" id="maEVMult">$0</div>
+          <div class="ma-result-sub" id="maEVMultSub">—</div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-title">📊 Football Field — Rango de Valoración (Enterprise Value)</div>
+        <canvas id="chartFootball"></canvas>
+      </div>
+
+      <div class="ma-tabs">
+        <button class="ma-subtab-btn active" onclick="switchMATab('dcf',this)">Flujo de Caja Proyectado</button>
+        <button class="ma-subtab-btn" onclick="switchMATab('syn',this)">Sinergias M&amp;A</button>
+      </div>
+
+      <div id="ma-sub-dcf" class="ma-subcontent active">
+        <div class="chart-container">
+          <div class="chart-title">💰 FCF Proyectado y Valor Presente</div>
+          <div class="ma-table-wrap">
+            <table class="ma-table" id="maDcfTable"></table>
+          </div>
+        </div>
+        <div class="chart-container">
+          <div class="chart-title">📈 Evolución de Ingresos, EBITDA y FCF</div>
+          <canvas id="chartMAProjection"></canvas>
+        </div>
+      </div>
+
+      <div id="ma-sub-syn" class="ma-subcontent">
+        <div class="ma-panel" style="margin-bottom:18px">
+          <div class="ma-section-title" style="margin-top:0;padding-top:0;border-top:none">🔗 Estimador de Sinergias</div>
+          <div class="sensitivity-grid">
+            <div class="ma-field">
+              <label>Sinergias de Costos Anuales (run-rate) <b id="dSynCost">$0</b></label>
+              <input type="range" id="maSynCost" min="0" max="500000000" step="5000000" value="0" oninput="runMA()">
+            </div>
+            <div class="ma-field">
+              <label>Sinergias de Ingresos Anuales (run-rate) <b id="dSynRev">$0</b></label>
+              <input type="range" id="maSynRev" min="0" max="500000000" step="5000000" value="0" oninput="runMA()">
+            </div>
+            <div class="ma-field">
+              <label>Años para Capturar 100% <b id="dSynYears">3</b></label>
+              <input type="range" id="maSynYears" min="1" max="6" step="1" value="3" oninput="runMA()">
+            </div>
+            <div class="ma-field">
+              <label>Costo de Integración (one-off) <b id="dSynCost1">$0</b></label>
+              <input type="range" id="maSynOneoff" min="0" max="800000000" step="10000000" value="0" oninput="runMA()">
+            </div>
+          </div>
+        </div>
+        <div class="ma-results-grid">
+          <div class="ma-result-card green">
+            <div class="ma-result-label">VAN de Sinergias (neto)</div>
+            <div class="ma-result-value" id="maSynNPV">$0</div>
+            <div class="ma-result-sub">Descontado al WACC, neto de costo de integración</div>
+          </div>
+          <div class="ma-result-card blue">
+            <div class="ma-result-label">EV Combinado (DCF + Sinergias)</div>
+            <div class="ma-result-value" id="maEVCombined">$0</div>
+            <div class="ma-result-sub">Enterprise Value stand-alone + VAN sinergias</div>
+          </div>
+        </div>
+        <div class="chart-container">
+          <div class="chart-title">🧩 Ramp-up de Sinergias por Año</div>
+          <canvas id="chartSynergies"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTÓN EXPORTAR PDF FLOTANTE -->
+<button class="pdf-export-btn" onclick="exportToPDF()">
+  📄 Descargar Análisis PDF
+</button>
+
+<script src="./intelligence.js" defer></script>
+
+<div class="app-footer">
+  <span><strong>Amberes Intelligence™</strong> · Demo de análisis financiero y evaluación de proyectos.</span>
+  <span>Los resultados dependen de los datos y supuestos cargados. Verifica siempre los cálculos antes de utilizarlos para decisiones financieras.</span>
+</div>
+</body>
+</html>
