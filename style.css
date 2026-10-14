@@ -3968,6 +3968,39 @@ h2 span {
         padding:
             22px;
 
-    }
+    } 
+    
+.intelligence-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 15px 22px;
+    background: #ddb15f;
+    color: #0b2027;
+    border: 1px solid #ddb15f;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 180ms ease, color 180ms ease;
+}
+
+.intelligence-cta:hover {
+    background: transparent;
+    color: #ddb15f;
+}
+
+.intelligence-cta:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+.intelligence-demo-link {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 }
