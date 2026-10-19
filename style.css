@@ -4034,3 +4034,10 @@ h2 span {
     color: var(--cream);
     border-color: var(--navy);
 }
+
+
+/* Logo compartido entre el sitio corporativo y Amberes Intelligence */
+.beguinage-logo { width: 44px; height: 44px; }
+.beguinage-logo .brand-logo-image { width: 44px; height: 44px; object-fit: contain; display: block; }
+.language-selector a { color: var(--muted); text-decoration: none; font-size: 9px; font-weight: 700; }
+.language-selector a:hover, .language-selector a:focus-visible, .language-selector a.language-active { color: var(--navy); }
