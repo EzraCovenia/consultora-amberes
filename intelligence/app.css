@@ -1,0 +1,46 @@
+/* Amberes Intelligence — complemento de interfaz (multi-módulo) */
+.upload-btn.alt{background:transparent;color:var(--gold-light);border:1px solid var(--gold);text-decoration:none;display:inline-flex;align-items:center}
+.upload-btn.alt:hover{background:rgba(200,155,60,.15);box-shadow:none}
+.load-msg{font-size:12.5px;color:var(--text-dim);margin-top:10px;min-height:16px}
+.load-msg.err{color:var(--red)}
+.source-bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 28px;border-bottom:1px solid var(--border);align-items:center}
+.src-chip{font-size:11px;font-weight:600;padding:5px 11px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text-dim);display:inline-flex;gap:6px;align-items:center}
+.src-chip i{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--text-faint)}
+.src-chip.cargado i{background:var(--green)} .src-chip.derivado i{background:var(--amber)} .src-chip.ausente i{background:var(--red)}
+.src-chip em{font-style:normal;color:var(--text-faint);font-weight:500}
+.assump{margin:18px 28px 0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:0}
+.assump summary{cursor:pointer;padding:12px 18px;font-weight:700;font-size:13px;color:var(--gold-light);letter-spacing:.3px}
+.assump .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;padding:6px 18px 16px}
+.assump label{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--text-faint);font-weight:600;margin-bottom:5px}
+.assump input,.assump select{width:100%;background:var(--surface2);border:1px solid var(--border);color:#fff;padding:8px 10px;border-radius:7px;font-size:13px;font-family:inherit}
+.assump .hint{grid-column:1/-1;font-size:11.5px;color:var(--text-faint)}
+.tag-est{font-size:10px;font-weight:700;color:var(--amber);border:1px solid var(--amber);border-radius:4px;padding:1px 5px;margin-left:6px;vertical-align:middle}
+.tag-src{font-size:10px;font-weight:700;color:var(--text-faint);border:1px solid var(--border-strong);border-radius:4px;padding:1px 5px;margin-left:6px}
+.tag-src.file{color:var(--green);border-color:var(--green)}
+.section-h{font-family:Manrope,Inter,sans-serif;font-size:15px;font-weight:700;color:var(--cream);margin:26px 0 12px;letter-spacing:.2px}
+.sub-note{font-size:12px;color:var(--text-faint);margin:-6px 0 12px}
+.dashboard-content{padding:22px 28px}
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:18px}
+.tbl-wrap table{width:100%;border-collapse:collapse;font-size:12.5px}
+.tbl-wrap th{background:var(--surface2);color:var(--text-dim);padding:9px 12px;text-align:right;font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--border-strong);white-space:nowrap}
+.tbl-wrap th:first-child,.tbl-wrap td:first-child{text-align:left;position:sticky;left:0;background:var(--surface)}
+.tbl-wrap td{padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--text-dim)}
+.tbl-wrap tr.tot td{font-weight:700;color:#fff;background:rgba(200,155,60,.07)}
+.tbl-wrap tr.chk td{color:var(--green)} .tbl-wrap tr.chk.bad td{color:var(--red)}
+.neg{color:var(--red)!important} .pos{color:var(--green)!important}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.btn{background:var(--gold);color:#102a36;border:none;border-radius:7px;padding:10px 18px;font-weight:700;font-size:13px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--gold-light);border:1px solid var(--gold)}
+.btn:hover{filter:brightness(1.08)}
+.rec-list .insight-item b{color:var(--cream)}
+.sev{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-right:8px;padding:1px 6px;border-radius:4px}
+.sev.danger{background:rgba(216,103,103,.18);color:var(--red)} .sev.warning{background:rgba(228,199,122,.18);color:var(--amber)} .sev.success{background:rgba(78,168,120,.18);color:var(--green)} .sev.info{background:rgba(79,124,130,.25);color:var(--text-dim)}
+.insight-item.info{border-left-color:var(--petrol)}
+.chart-container{position:relative}
+.chart-container canvas{max-height:340px}
+.app-footer{margin:30px 28px 24px;padding-top:16px;border-top:1px solid var(--border);font-size:11.5px;color:var(--text-faint);line-height:1.6}
+.inv-row .st-usada{color:var(--green)} .inv-row .st-vacía,.inv-row .st-informativa{color:var(--text-faint)} .inv-row .st-recalculada{color:var(--amber)}
+@media(max-width:640px){.dashboard-content,.source-bar{padding-left:14px;padding-right:14px}.assump{margin-left:14px;margin-right:14px}}
+html{background-color:#0c222c}
+.src-chip{background:transparent;cursor:pointer;font-family:inherit}.src-chip:hover{border-color:var(--gold);color:var(--cream)}
+.bar-actions{margin-left:auto;display:flex;gap:8px}.btn.sm{padding:5px 12px;font-size:11.5px}
