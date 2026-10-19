@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>QR | Amberes Consultora</title>
+<style>
+:root{--navy:#102a36;--gold:#c8953d;--cream:#f5f3ee;--muted:#52636a}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--cream);color:var(--navy);font-family:Arial,Helvetica,sans-serif;display:grid;place-items:center;padding:24px}
+.card{width:min(100%,720px);background:#fff;border:1px solid #d9dfdd;box-shadow:0 18px 50px rgba(16,42,54,.12);text-align:center;padding:38px 28px 30px;border-radius:14px}
+.brand{background:var(--navy);color:#fff;margin:-38px -28px 28px;padding:24px 16px;border-bottom:5px solid var(--gold);border-radius:14px 14px 0 0}
+.brand h1{font-family:Georgia,serif;letter-spacing:.12em;font-size:25px;margin:0 0 8px}
+.brand p{color:#e4c77a;letter-spacing:.12em;font-size:11px;margin:0}
+h2{font-family:Georgia,serif;font-weight:500;font-size:28px;margin:14px 0 8px}
+.intro{color:var(--muted);line-height:1.6;margin:0 auto 22px;max-width:490px}
+.qr{width:min(100%,340px);height:auto;display:block;margin:0 auto 20px;image-rendering:pixelated}
+.url{font-size:13px;overflow-wrap:anywhere;color:var(--muted)}
+.services{font-size:13px;line-height:1.7;margin:20px auto;max-width:500px}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+a.btn,button{border:0;text-decoration:none;background:var(--navy);color:white;padding:12px 18px;font-weight:700;cursor:pointer;font-size:14px}
+a.secondary{background:white;color:var(--navy);border:1px solid var(--gold)}
+.languages{margin-top:22px;font-size:13px}.languages a{color:var(--navy);margin:0 8px}
+@media print{body{background:#fff;padding:0}.card{box-shadow:none;border:0;width:100%;max-width:none;padding:22mm 10mm}.brand{border-radius:0;margin:-22mm -10mm 12mm;padding:18mm 0 10mm}.actions,.languages{display:none}.qr{width:82mm}.url{font-size:11pt}}
+</style>
+</head>
+<body>
+<main class="card">
+<header class="brand"><h1>AMBERES CONSULTORA</h1><p>FINANZAS · ESTRATEGIA · GESTIÓN</p></header>
+<h2>Conozca nuestros servicios</h2>
+<p class="intro">Escanee este código QR con la cámara de su teléfono para visitar nuestro sitio y conocer nuestras soluciones de consultoría.</p>
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=900x900&amp;format=png&amp;ecc=H&amp;margin=4&amp;color=102a36&amp;bgcolor=ffffff&amp;data=https%3A%2F%2Fezracovenia.github.io%2Fconsultora-amberes%2F" alt="Código QR para abrir el sitio de Amberes Consultora">
+<p class="url">https://ezracovenia.github.io/consultora-amberes/</p>
+<p class="services">Consultoría financiera y control de gestión · Evaluación de proyectos · Soluciones para PYMES · Personas y talento · Amberes Intelligence™</p>
+<div class="actions"><button onclick="window.print()">Imprimir / Guardar como PDF</button><a class="btn secondary" href="https://api.qrserver.com/v1/create-qr-code/?size=1200x1200&amp;format=png&amp;ecc=H&amp;margin=4&amp;color=102a36&amp;bgcolor=ffffff&amp;data=https%3A%2F%2Fezracovenia.github.io%2Fconsultora-amberes%2F" target="_blank" rel="noopener">Abrir QR en alta resolución</a></div>
+<nav class="languages" aria-label="Versiones del sitio">Web: <a href="../index.html">Español</a><a href="../en/">English</a><a href="../fr/">Français</a></nav>
+</main>
+</body>
+</html>
