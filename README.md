@@ -6,13 +6,11 @@ Sitio corporativo de Amberes Consultora y demo pública de **Amberes Intelligenc
 
 - **Sitio corporativo:** https://ezracovenia.github.io/consultora-amberes/
 - **Demo Amberes Intelligence™:** https://ezracovenia.github.io/consultora-amberes/intelligence/
-- **Plantilla Excel estándar:** https://ezracovenia.github.io/consultora-amberes/intelligence/plantilla/Amberes_Plantilla_Estandar.xlsx
-- **Ejemplo completo para probar la demo:** https://ezracovenia.github.io/consultora-amberes/intelligence/plantilla/Amberes_Ejemplo_Completo.xlsx
 
 ## Cómo probar la demo
 
 1. Abre Amberes Intelligence™ desde el enlace anterior.
-2. Selecciona **Cargar ejemplo** para ver un caso demostrativo, o descarga la plantilla estándar y complétala con datos de prueba.
+2. Selecciona **Cargar ejemplo** para ver un caso demostrativo con datos ficticios.
 3. Explora los módulos disponibles y prueba la exportación a Excel y PDF.
 4. Revisa qué indicadores provienen del archivo y cuáles aparecen como estimados.
 
@@ -26,8 +24,7 @@ Los resultados son referenciales. Las cifras derivadas o marcadas como estimadas
 
 - `index.html` y `style.css`: sitio corporativo.
 - `assets/`: recursos gráficos.
-- `intelligence/index.html`: demo financiera.
-- `intelligence/plantilla/Amberes_Plantilla_Estandar.xlsx`: plantilla vacía para completar.
-- `intelligence/plantilla/Amberes_Ejemplo_Completo.xlsx`: libro demostrativo para probar los módulos.
+- `intelligence/index.html`: demo financiera en un solo archivo (incluye el ejemplo con datos ficticios).
+- La plantilla Excel estándar es un entregable para clientes con contrato y no se publica en el sitio.
 
 El sitio se publica mediante GitHub Pages desde la rama principal del repositorio.
